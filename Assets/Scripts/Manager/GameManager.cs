@@ -70,6 +70,11 @@ public class GameManager : MonoBehaviour
         //UI
     }
 
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
     public void ReturnLobby()
     {
         //lobby or title æ¿¿∏∑Œ
