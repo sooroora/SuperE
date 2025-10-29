@@ -27,6 +27,11 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+    private void Start()
+    {
+        bestScore = PlayerPrefs.GetFloat("BestScore", bestScore);
+    }
+
     private void Update()
     {
         if(!isPlay)
@@ -38,19 +43,8 @@ public class GameManager : MonoBehaviour
     public void GameStart()
     {
         currentScore = 0;
+        isPlay = true;
         //mapLooper
-    }
-
-    public void GameOver()
-    {
-        isPlay = false;
-
-        if (currentScore > bestScore)
-        {
-            bestScore = currentScore;
-        }
-
-        //UI
     }
 
     public void SpeedUp()
@@ -61,5 +55,23 @@ public class GameManager : MonoBehaviour
     public void AddScore(float value)
     {
         currentScore += value;
+    }
+
+    public void GameOver()
+    {
+        isPlay = false;
+
+        if (currentScore > bestScore)
+        {
+            bestScore = currentScore;
+            PlayerPrefs.SetFloat("BestScore", bestScore);
+        }
+
+        //UI
+    }
+
+    public void ReturnLobby()
+    {
+        //lobby or title æ¿¿∏∑Œ
     }
 }
