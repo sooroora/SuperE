@@ -1,18 +1,42 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class NewBehaviourScript : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static GameManager Instance;
+    public float currentScore = 0;
+    public float bestScore = 0;
+
+    private void Awake()
     {
-        
+        if (Instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        currentScore += Time.deltaTime;
     }
+
+    public void GameOver()
+    {
+        if (currentScore > bestScore)
+        {
+            bestScore = currentScore;
+        }
+        currentScore = 0;
+    }
+
+    public void SpeedUp()
+    {
+
+    }
+
+
 }
