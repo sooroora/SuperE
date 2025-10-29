@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : Character
 {
-    protected bool crash = false;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +18,7 @@ public class Player : Character
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        move = transform.position;
         crash = true;
     }
 }

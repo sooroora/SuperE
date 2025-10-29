@@ -6,7 +6,7 @@ using UnityEngine;
 public class Enemy : Character
 {
     protected Transform EnemyTransform;
-    protected Vector3 move = Vector3.zero;
+    
     protected Vector3 Transform = Vector3.zero;
     protected Vector3 right = Vector3.right;
     protected Vector3 left = Vector3.left;
@@ -33,11 +33,11 @@ public class Enemy : Character
     }
     protected void Move()
     {
+
         if (crash)
         {
-
-            move = Vector3.SmoothDamp(EnemyTransform.position,EnemyTransform.position + right,ref speed,1.0f);
-            transform.position = move;
+            transform.position = Vector3.SmoothDamp(transform.position,move + right,ref speed,1.0f);
+             
             if (EnemyTransform.position == EnemyTransform.position + right)
             {
                 crash = false;
