@@ -4,8 +4,16 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
+
+    [SerializeField] private UIBase uiBase;
+    [SerializeField] private Player player;
+    [SerializeField] private Enemy enemy;
+    [SerializeField] private MapLooper mapLooper;
+
     public float currentScore = 0;
     public float bestScore = 0;
+
+    public bool isPlay;
 
     private void Awake()
     {
@@ -21,22 +29,37 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        currentScore += Time.deltaTime;
+        if(!isPlay)
+            return;
+
+        AddScore(Time.deltaTime);
+    }
+
+    public void GameStart()
+    {
+        currentScore = 0;
+        //mapLooper
     }
 
     public void GameOver()
     {
+        isPlay = false;
+
         if (currentScore > bestScore)
         {
             bestScore = currentScore;
         }
-        currentScore = 0;
+
+        //UI
     }
 
     public void SpeedUp()
     {
-
+        //mapLooper.
     }
 
-
+    public void AddScore(float value)
+    {
+        currentScore += value;
+    }
 }
