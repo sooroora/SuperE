@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
+    protected bool crash = false;
+    protected Transform Transform;
+    private void Awake()
+    {
+        Transform = GetComponent<Transform>();
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -15,4 +21,6 @@ public class Character : MonoBehaviour
     {
         
     }
+            
+
 }
