@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad5682f4b5ecaf94897e3eb893061505, type: 3}
+  m_Name: Click
+  m_EditorClassIdentifier: 
+  tables:
+  - {fileID: 8300000, guid: 760757bbcb6ca2f478100e7e14688a3f, type: 3}
+  - {fileID: 8300000, guid: 3df2561e2f4b03d44b72e37334091f13, type: 3}
+  - {fileID: 8300000, guid: 2219a726c388a974696f82fbbecf035a, type: 3}
+  - {fileID: 8300000, guid: 632866ce35faaad478314e85f237e95c, type: 3}
+  - {fileID: 8300000, guid: 1ad2dc9e92327ad40b0183c77968cbb1, type: 3}
+  - {fileID: 8300000, guid: d7a4d9bb61151e94182d894d63f68c1a, type: 3}
+  - {fileID: 8300000, guid: 129b934c0785ab04babcc6a8f16c26e7, type: 3}
+  - {fileID: 8300000, guid: 761021b9b0b7a504dba7ea63753768b8, type: 3}
+  - {fileID: 8300000, guid: e2b30d4f3d20e384eac553a95a96a84f, type: 3}
+  - {fileID: 8300000, guid: 84451555667d4e54da2ee42bc735caa7, type: 3}
+  - {fileID: 8300000, guid: af1bc95f02bc19b45ad612880a3155ac, type: 3}
+  - {fileID: 8300000, guid: 55bbaa9d805829549b504a44203eb5ef, type: 3}
