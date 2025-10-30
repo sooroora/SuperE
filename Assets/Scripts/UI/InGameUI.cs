@@ -1,18 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class InGameU : MonoBehaviour
+public class InGameUI : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [Header("UI References")]
+    public Text scoreText;          
+    public Button pauseButton;      
+
+    private void Start()
     {
         
+        if (pauseButton != null)
+            pauseButton.onClick.AddListener(OnPauseButtonClicked);
+
+        
+        UpdateScore(0);
     }
 
-    // Update is called once per frame
-    void Update()
+    
+    public void UpdateScore(int score)
     {
-        
+        if (scoreText != null)
+            scoreText.text = "Score: " + score;
+    }
+
+    
+    private void OnPauseButtonClicked()
+    {
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.TogglePause();
+        }
     }
 }
