@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
 
     public void Crash()
     {
+        isCrash = true;
+        enemy.Move();
     }
 
 
