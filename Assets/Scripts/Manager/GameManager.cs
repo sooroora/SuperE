@@ -5,13 +5,13 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    [SerializeField] private UIBase uiBase;
+    [SerializeField] private GameOverUI gameOverUI;
     [SerializeField] private Player player;
     [SerializeField] private Enemy enemy;
     [SerializeField] private MapLooper mapLooper;
 
-    public float currentScore = 0;
-    public float bestScore = 0;
+    public int currentScore = 0;
+    public int bestScore = 0;
 
     public bool isPlay;
     public bool isCrash;
@@ -37,15 +37,13 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        bestScore = PlayerPrefs.GetFloat("BestScore", bestScore);
+        bestScore = PlayerPrefs.GetInt("BestScore", bestScore);
     }
 
     private void Update()
     {
         if(!isPlay)
             return;
-
-        AddScore(Time.deltaTime);
     }
 
     public void GameStart()
@@ -60,7 +58,7 @@ public class GameManager : MonoBehaviour
         //mapLooper.
     }
 
-    public void AddScore(float value)
+    public void AddScore(int value)
     {
         currentScore += value;
     }
@@ -72,10 +70,10 @@ public class GameManager : MonoBehaviour
         if (currentScore > bestScore)
         {
             bestScore = currentScore;
-            PlayerPrefs.SetFloat("BestScore", bestScore);
+            PlayerPrefs.SetInt("BestScore", bestScore);
         }
 
-        //UI
+        gameOverUI.Show(currentScore, bestScore);
     }
 
     public void RestartGame()
