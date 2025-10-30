@@ -11,12 +11,14 @@ public class Player : Character
     private CapsuleCollider2D PlayerSize;
     private Vector3 ori;
     private Vector3 slide;
+    private Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
         PlayerSize = GetComponent<CapsuleCollider2D>();
         _rigidbody = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
         ori = PlayerSize.size;
         slide = PlayerSize.size * 0.5f;
 
@@ -29,12 +31,14 @@ public class Player : Character
         {
             if (jumpCount == 2)
             {
+                animator.SetBool("IsJump", true);
                 _rigidbody.velocity = Vector3.up * flapForce;
                 jumpCount--;
             }
             else if (jumpCount == 1)
             {
-                _rigidbody.velocity = Vector3.up * (flapForce * 0.5f);
+                animator.SetBool("IsDubleJump", true);
+                _rigidbody.velocity = Vector3.up * (flapForce * 0.8f);
                 jumpCount--;
             }
             else return;
@@ -42,11 +46,14 @@ public class Player : Character
         }
         if (Input.GetKey(KeyCode.Z))
         {
+            animator.SetBool("IsSliding", true);
             PlayerSize.size = slide;
             PlayerSize.offset = new Vector2(0, -(ori.y - slide.y) / 2f);
+            
         }
         else 
         {
+            animator.SetBool("IsSliding", false);
             PlayerSize.size = ori;
             PlayerSize.offset = Vector2.zero;
         }
@@ -69,6 +76,8 @@ public class Player : Character
     {
         if (collision.gameObject.CompareTag("Floor"))
         {
+            animator.SetBool("IsDubleJump", false);
+            animator.SetBool("IsJump", false);
             jumpCount = 2;
         }
 
