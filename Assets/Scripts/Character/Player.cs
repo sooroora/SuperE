@@ -8,11 +8,18 @@ public class Player : Character
     public bool isFlap = false;
     private Rigidbody2D _rigidbody;
     private int jumpCount = 2;
+    private CapsuleCollider2D PlayerSize;
+    private Vector3 ori;
+    private Vector3 slide;
 
     // Start is called before the first frame update
     void Start()
     {
+        PlayerSize = GetComponent<CapsuleCollider2D>();
         _rigidbody = GetComponent<Rigidbody2D>();
+        ori = PlayerSize.size;
+        slide = PlayerSize.size * 0.5f;
+
     }
 
     // Update is called once per frame
@@ -32,6 +39,16 @@ public class Player : Character
             }
             else return;
             
+        }
+        if (Input.GetKey(KeyCode.Z))
+        {
+            PlayerSize.size = slide;
+            PlayerSize.offset = new Vector2(0, -(ori.y - slide.y) / 2f);
+        }
+        else 
+        {
+            PlayerSize.size = ori;
+            PlayerSize.offset = Vector2.zero;
         }
     }
     
