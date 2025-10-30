@@ -21,7 +21,7 @@ public class Enemy : Character
     // Update is called once per frame
     void Update()
     {
-        Move();
+        
     }
     protected void Move() // 충돌시 플레이어와의 거리를 줄이기 위한 로직
     {
@@ -36,17 +36,17 @@ public class Enemy : Character
             }
         }
     }
-    protected void SpeedUp() // 스피드업 아이템을 먹었을때 거리를 벌리기 위한 로직
-    {
-        if (speedUp)
-        {
-            transform.position = Vector3.SmoothDamp(transform.position, left, ref leftSpeed, 1.0f);
+    //protected void SpeedUp() // 스피드업 아이템을 먹었을때 거리를 벌리기 위한 로직
+    //{
+    //    if (speedUp)
+    //    {
+    //        transform.position = Vector3.SmoothDamp(transform.position, left, ref leftSpeed, 1.0f);
 
-            if (Vector3.Distance(transform.position, left) < 0.1f)
-            {
-                speedUp = false;
-            }
-        }
-    }
-     
+    //        if (Vector3.Distance(transform.position, left) < 0.1f)
+    //        {
+    //            speedUp = false;
+    //        }
+    //    }
+    //}
+
 }

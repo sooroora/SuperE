@@ -18,15 +18,16 @@ public class Player : Character
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (CompareTag("Obstacle")) //플레이어가 충돌시 벽 인지 체크
+        if (collision.CompareTag("Obstacle")) //플레이어가 충돌시 벽 인지 체크
         {
-            right = transform.position + Vector3.right;
+            
             crash = true; //만약 벽이 맞다면 Enemy 스크립트에 있는 Move를 켜주기 위한 bool값
+            //Gamemanager.instance.Crash
         }
-        else
-        {
-            left = transform.position + Vector3.left;
-            speedUp = true;
-        }
+        //else 아이템 사용 
+        //{
+        //    
+        //    
+        //}
     }
 }
