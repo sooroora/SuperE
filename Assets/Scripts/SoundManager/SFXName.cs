@@ -1,4 +1,4 @@
-public enum SoundName
+public enum SFXName
 {
     Click,
     Jump,
