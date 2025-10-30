@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class Player : Character
 {
-    private float flapForce = 10f;
+    public float flapForce = 20f;
     public bool isFlap = false;
     private Rigidbody2D _rigidbody;
+    private int jumpCount = 2;
 
     // Start is called before the first frame update
     void Start()
@@ -19,32 +20,40 @@ public class Player : Character
     {
         if (Input.GetKeyDown(KeyCode.LeftAlt))
         {
-            isFlap = true;
-            _rigidbody.velocity = Vector3.up * flapForce;
+            if (jumpCount == 2)
+            {
+                _rigidbody.velocity = Vector3.up * flapForce;
+                jumpCount--;
+            }
+            else if (jumpCount == 1)
+            {
+                _rigidbody.velocity = Vector3.up * (flapForce * 0.5f);
+                jumpCount--;
+            }
+            else return;
+            
         }
     }
-    private void FixedUpdate()
-    {
-        
-        //Vector3 velocity = _rigidbody.velocity;
-        //if (isFlap)
-        //{
-        //    velocity.y += flapForce;
-        //    isFlap = false;
-        //}
-        //_rigidbody.AddForce(velocity , ForceMode2D.Impulse);
-        
-    }
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Obstacle")) //플레이어가 충돌시 벽 인지 체크
         {
             GameManager.Instance.Crash();
         }
+        
         //else 아이템 사용 
         //{
         //    
         //    
         //}
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Floor"))
+        {
+            jumpCount = 2;
+        }
+
     }
 }
