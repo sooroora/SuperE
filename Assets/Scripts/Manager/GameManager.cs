@@ -14,6 +14,14 @@ public class GameManager : MonoBehaviour
     public float bestScore = 0;
 
     public bool isPlay;
+    public bool isCrash;
+
+    public void Crash()
+    {
+        isCrash = true;
+        enemy.Move();
+    }
+
 
     private void Awake()
     {
