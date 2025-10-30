@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,6 +10,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Player player;
     [SerializeField] private Enemy enemy;
     [SerializeField] private MapLooper mapLooper;
+    [SerializeField] private ItemSpawnManager spawnManager;
 
     public int currentScore = 0;
     public int bestScore = 0;
@@ -38,6 +40,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         bestScore = PlayerPrefs.GetInt("BestScore", bestScore);
+        spawnManager.PlaceItems();
     }
 
     private void Update()
@@ -50,7 +53,7 @@ public class GameManager : MonoBehaviour
     {
         currentScore = 0;
         isPlay = true;
-        //mapLooper
+        spawnManager.PlaceItems();
     }
 
     public void SpeedUp()
@@ -61,6 +64,7 @@ public class GameManager : MonoBehaviour
     public void AddScore(int value)
     {
         currentScore += value;
+        //UI
     }
 
     public void GameOver()
