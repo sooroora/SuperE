@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
-    protected bool crash = false; //충돌시 생명깎아먹기 위한 변수
     protected bool speedUp = false;
     protected Vector3 right = Vector3.zero;//오브젝트를 오른쪽으로 이동시키기 위한 변수
     protected Vector3 left = Vector3.zero;//오브젝트를 왼쪽으로 이동시키기 위한 변수
