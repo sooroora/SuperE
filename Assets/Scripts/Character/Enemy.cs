@@ -23,7 +23,7 @@ public class Enemy : Character
     {
 
     }
-    protected void Move() // 충돌시 플레이어와의 거리를 줄이기 위한 로직
+    public void Move() // 충돌시 플레이어와의 거리를 줄이기 위한 로직
     {
         transform.position = Vector3.SmoothDamp(transform.position, right, ref rightSpeed, 1.0f);
 
