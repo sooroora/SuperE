@@ -17,7 +17,7 @@ public class ItemSpawnManager : MonoBehaviour
     public float verticalSpace = 0.5f;
 
 
-    private Queue<GameObject> itemPool = new Queue<GameObject>();
+    private List<GameObject> itemPool = new List<GameObject>();
 
     private void Awake()
     {
@@ -30,8 +30,24 @@ public class ItemSpawnManager : MonoBehaviour
         {
             GameObject obj = Instantiate(itemPrefab);
             obj.SetActive(false);
-            itemPool.Enqueue(obj);
+            itemPool.Add(obj);
         }
+    }
+
+    private GameObject GetPooledObject()
+    {
+        foreach (var item in itemPool)
+        {
+            if (!item.activeInHierarchy)
+            {
+                item.SetActive(true);
+                return item;
+            }
+        }
+
+        GameObject newItem = Instantiate(itemPrefab);
+        itemPool.Add(newItem);
+        return newItem;
     }
 
     public void PlaceItems()
@@ -52,18 +68,8 @@ public class ItemSpawnManager : MonoBehaviour
                 for (int j = 0; j < verticalCount; j++)
                 {
                     Vector3 verticalPos = worldPos + Vector3.up * (verticalSpace * Mathf.Ceil(j / 2f) * (j % 2 == 0 ? -1 : 1));
-                    
 
-                    if (itemPool.Count > 0)
-                    {
-                        GameObject item = itemPool.Dequeue();
-                        item.transform.position = verticalPos;
-                        item.SetActive(true);
-                    }
-                    else
-                    {
-                        return;
-                    }
+                    GetPooledObject();
                 }
             }
         }
