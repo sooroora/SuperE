@@ -18,8 +18,9 @@ public class SoundClip : ScriptableObject
 
     public AudioClip GetClip(int idx = 0)
     {
-        if (tables.Count >= idx)
+        if (tables.Count <= idx)
             return null;
+        
         return tables[idx];
     }
     
