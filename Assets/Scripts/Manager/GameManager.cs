@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if(!isPlay)
+        if (!isPlay)
             return;
     }
 
@@ -84,5 +84,11 @@ public class GameManager : MonoBehaviour
     public void ReturnLobby()
     {
         //lobby or title æ¿¿∏∑Œ
+    }
+
+    public void TogglePause()
+    {
+        bool isPaused = Time.timeScale == 0f; 
+        Time.timeScale = isPaused ? 1f : 0f; 
     }
 }
