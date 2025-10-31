@@ -6,6 +6,11 @@ public class MapPiece : MonoBehaviour
 {
     public Transform lastPivot;
 
+    public float GetLastPivotX()
+    {
+        return lastPivot.position.x;
+    }
+
 
 }
 //��Ʈ�Ǻ��� ��ġ ���̴�.
