@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Player : Character
 {
-    public float flapForce = 20f;
-    public bool isFlap = false;
-    private Rigidbody2D _rigidbody;
-    private int jumpCount = 2;
-    private CapsuleCollider2D PlayerSize;
-    private Vector3 ori;
-    private Vector3 slide;
-    private Animator animator;
+    public float flapForce = 20f; //점프력
+    public bool isFlap = false; //점프유무 확인
+    private Rigidbody2D _rigidbody; // 물리엔진 변수값
+    private int jumpCount = 2; // 점프횟수
+    private CapsuleCollider2D PlayerSize; // 캐릭터 사이즈 변수
+    private Vector3 ori; // 캐릭터 사이즈를 저장하기 위한 변수
+    private Vector3 slide;// 캐릭터가 슬라이드시 사이즈를 줄이기 위한 변수
+    private Animator animator; // 애니메이터 변수
 
     // Start is called before the first frame update
     void Start()
@@ -19,23 +19,23 @@ public class Player : Character
         PlayerSize = GetComponent<CapsuleCollider2D>();
         _rigidbody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        ori = PlayerSize.size;
-        slide = PlayerSize.size * 0.5f;
+        ori = PlayerSize.size; //플레이어의 원래 사이즈를 담음
+        slide = PlayerSize.size * 0.5f; // 플레이어 사이즈를 절반으로 줄여서 담음
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftAlt))
+        if (Input.GetKeyDown(KeyCode.LeftAlt)) //alt 키 입력시 1번은 점프 2번은 더블점프 
         {
-            if (jumpCount == 2)
+            if (jumpCount == 2) //점프
             {
                 animator.SetBool("IsJump", true);
                 _rigidbody.velocity = Vector3.up * flapForce;
                 jumpCount--;
             }
-            else if (jumpCount == 1)
+            else if (jumpCount == 1) //더블점프
             {
                 animator.SetBool("IsDubleJump", true);
                 _rigidbody.velocity = Vector3.up * (flapForce * 0.8f);
@@ -44,22 +44,20 @@ public class Player : Character
             else return;
             
         }
-        if (Input.GetKey(KeyCode.Z))
+        if (Input.GetKey(KeyCode.Z)) //슬라이딩 유무 
         {
             animator.SetBool("IsSliding", true);
             PlayerSize.size = slide;
-            PlayerSize.offset = new Vector2(0, -(ori.y - slide.y) / 2f);
             
         }
         else 
         {
             animator.SetBool("IsSliding", false);
             PlayerSize.size = ori;
-            PlayerSize.offset = Vector2.zero;
         }
     }
     
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision) 
     {
         if (collision.CompareTag("Obstacle")) //플레이어가 충돌시 벽 인지 체크
         {
@@ -72,13 +70,13 @@ public class Player : Character
         //    
         //}
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision) 
     {
-        if (collision.gameObject.CompareTag("Floor"))
+        if (collision.gameObject.CompareTag("Floor")) //플레이어가 충돌한것이 Floor인지 확인
         {
-            animator.SetBool("IsDubleJump", false);
-            animator.SetBool("IsJump", false);
-            jumpCount = 2;
+            animator.SetBool("IsDubleJump", false); // 더블점프 애니메이터 종료
+            animator.SetBool("IsJump", false); // 점프 애니메이터 종료
+            jumpCount = 2; // 점프를 했다면 점프횟수를 돌려주기 위한 변수
         }
 
     }

@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         bestScore = PlayerPrefs.GetInt("BestScore", bestScore);
-        spawnManager.PlaceItems();
+        //spawnManager.PlaceItems();
     }
 
     private void Update()

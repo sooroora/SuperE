@@ -185,7 +185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e02f8135449e17740b44058a356aaf0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flapForce: 4
+  flapForce: 30
   isFlap: 0
 --- !u!50 &4533982946053647687
 Rigidbody2D:
@@ -202,7 +202,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 10
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
