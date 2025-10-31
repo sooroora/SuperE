@@ -9,8 +9,10 @@ public class Sura : Player
     {
         if (collision.CompareTag("Obstacle")) //플레이어가 충돌시 벽 인지 체크
         {
-            int Destroy = Random.Range(1, 11);
-            if (Destroy >= 3)
+            
+            int destroy = Random.Range(1, 11);
+            Debug.Log(destroy);
+            if (destroy <= 3)
             {
                 GameObject.Destroy(collision.gameObject);
             }

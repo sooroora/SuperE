@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     protected Vector3 ori; // 캐릭터 사이즈를 저장하기 위한 변수
     protected Vector3 slide;// 캐릭터가 슬라이드시 사이즈를 줄이기 위한 변수
     protected Animator animator; // 애니메이터 변수
+    
 
     // Start is called before the first frame update
     protected virtual void Start()
@@ -72,12 +73,12 @@ public class Player : MonoBehaviour
         {
             GameManager.Instance.Crash();
         }
-        
-        //else 아이템 사용 
-        //{
-        //    
-        //    
-        //}
+
+        else //아이템 사용
+        {
+
+
+        }
     }
     protected virtual void OnCollisionEnter2D(Collision2D collision) 
     {
