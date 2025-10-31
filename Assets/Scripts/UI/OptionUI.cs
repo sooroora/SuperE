@@ -10,14 +10,14 @@ public class OptionUI : MonoBehaviour
 
     private void Start()
     {
-        // 이전 설정 불러오기
-        masterSlider.value = PlayerPrefsManager.GetFloatValue<ESoundSettingName>(ESoundSettingName.MasterVolume)??1.0f;
-        bgmSlider.value = PlayerPrefsManager.GetFloatValue<ESoundSettingName>(ESoundSettingName.BgmVolume)??1.0f;
-        sfxSlider.value = PlayerPrefsManager.GetFloatValue<ESoundSettingName>(ESoundSettingName.SfxVolume)??1.0f;
+      
+        masterSlider.value = PlayerPrefsManager.GetFloatValue<ESoundSettingName>(ESoundSettingName.MasterVolume);
+        bgmSlider.value = PlayerPrefsManager.GetFloatValue<ESoundSettingName>(ESoundSettingName.BgmVolume);
+        sfxSlider.value = PlayerPrefsManager.GetFloatValue<ESoundSettingName>(ESoundSettingName.SfxVolume);
 
-        // 슬라이더 이벤트 연결
-        masterSlider.onValueChanged.AddListener(v => SoundManager.Instance.SetVolume("Master", v));
-        bgmSlider.onValueChanged.AddListener(v => SoundManager.Instance.SetVolume("BGM", v));
-        sfxSlider.onValueChanged.AddListener(v => SoundManager.Instance.SetVolume("SFX", v));
+       
+        masterSlider.onValueChanged.AddListener(v => SoundManager.Instance.SetMasterVolume(v));
+        bgmSlider.onValueChanged.AddListener(v => SoundManager.Instance.SetBgmVolume(v));
+        sfxSlider.onValueChanged.AddListener(v => SoundManager.Instance.SetSfxVolume(v));
     }
 }
