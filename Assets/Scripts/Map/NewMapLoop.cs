@@ -13,11 +13,12 @@ public class NewMapLoop : MonoBehaviour
     [SerializeField] private float width;
     [SerializeField] private float spawnDistance;
     [SerializeField] private GameObject mapPieseSetParse;
-    
+    [SerializeField] private Transform sponeZone;
+    [SerializeField] private GameObject mapiecePrefeb;
     void Start()
     {
         //mapPieseSetParse = transform.SetParent(movingPivot);
-        Rispone(this.transform);
+        Rispone(movingPivot.transform);
     }
 
     // Update is called once per frame
@@ -25,15 +26,25 @@ public class NewMapLoop : MonoBehaviour
     {
         Move();
         DestroyBackground();
-        NewBackgrounSpone();
+
 
     }
     public void Rispone(Transform movingPivot)
     {
         MapPiece randompivot = mapPieces[Random.Range(0, mapPieces.Count)];
-        MapPiece mapRisfon = Instantiate(randompivot,movingPivot.transform.position,Quaternion.identity );
+        MapPiece mapRisfon = Instantiate(randompivot, movingPivot.transform.position, Quaternion.identity);
         mapRisfon.transform.SetParent(movingPivot);
         movingPivot = mapRisfon.transform;
+        if (movingPivot.transform.position.x < mapDestroyPosition.position.x)
+        {
+            mapPieces.Remove(mapPieces[0]);
+            Destroy(movingPivot.gameObject);
+            var newMapiece = Instantiate(mapiecePrefeb,new Vector3(movingPivot.position.x,movingPivot.position.y ) , Quaternion.identity);
+
+            Instantiate(newMapiece);
+
+        }
+
     }
 
     public void DestroyBackground()
@@ -46,11 +57,11 @@ public class NewMapLoop : MonoBehaviour
                 {
                     Destroy(map.gameObject);
                 }
-                
-                
+
+
             }
         }
-        
+
     }
     public void Move()
     {
@@ -58,12 +69,6 @@ public class NewMapLoop : MonoBehaviour
         pos.x -= speed * Time.deltaTime;
         movingPivot.transform.position = pos;
     }
-    public void NewBackgrounSpone()
-    {
-        if (movingPivot.transform.position.x < mapDestroyPosition.position.x)
-        {
-            MapPiece randompivot = mapPieces[Random.Range(0, mapPieces.Count)];
-            MapPiece mapRisfon = Instantiate(randompivot, movingPivot.transform.position, Quaternion.identity);
-        }
-    }
 }
+    
+        
