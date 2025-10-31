@@ -1,14 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class Yohan : Player
 {
-    //protected LayerMask item;
-    //private void Update()
-    //{
-    //    Collider2D hit = Physics2D.OverlapCircle(transform.position, 4f, item);
-    //    hit.transform.position = transform.position;
-    //    transform.position = Vector3.SmoothDamp(transform.position, hit , ref , 1.0f);
-    //}
+    protected Vector3 Speed = Vector3.zero;
+    [SerializeField] LayerMask item;
+    protected Transform Player;
+    private void Awake()
+    {
+        Player = GetComponent<Transform>();
+    }
+    private void FixedUpdate()
+    {
+        
+        Collider2D[] hits = Physics2D.OverlapCircleAll(Player.position, 4f, item);
+        foreach (Collider2D hit in hits)
+        {
+            hit.transform.position = Vector3.SmoothDamp(hit.transform.position, Player.position + Vector3.right, ref Speed, 5.0f);
+        }
+            
+        
+    }
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawWireSphere(transform.position, 4f);
+    }
 }
