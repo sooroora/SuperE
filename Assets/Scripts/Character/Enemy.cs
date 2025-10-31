@@ -6,6 +6,9 @@ using static UnityEngine.GraphicsBuffer;
 
 public class Enemy : Character
 {
+    protected bool speedUp = false;
+    protected Vector3 right = Vector3.zero;//오브젝트를 오른쪽으로 이동시키기 위한 변수
+    protected Vector3 left = Vector3.zero;//오브젝트를 왼쪽으로 이동시키기 위한 변수
     protected Vector3 rightSpeed = Vector3.zero; //이속을 위한 변수
     protected Vector3 leftSpeed = Vector3.zero; //이속을 위한 변수
     private void Awake()
