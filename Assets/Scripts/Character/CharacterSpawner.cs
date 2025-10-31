@@ -10,7 +10,7 @@ public class CharacterSpawner : MonoBehaviour
 
     public void SpawnCharacter()
     {
-        index = PlayerPrefs.GetInt("character", 0);
+        index = PlayerPrefs.GetInt("SelectedCharacter", 0);
         GameObject player = characterPrefabs[index];
         Instantiate(player, sqawnPoint, Quaternion.identity);
     }
