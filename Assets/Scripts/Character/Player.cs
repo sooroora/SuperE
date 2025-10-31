@@ -21,7 +21,7 @@ public class Player : Character
         animator = GetComponent<Animator>();
         ori = PlayerSize.size;
         slide = PlayerSize.size * 0.5f;
-
+        
     }
 
     // Update is called once per frame
