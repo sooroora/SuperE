@@ -9,11 +9,12 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Player player;
     [SerializeField] private Enemy enemy;
     [SerializeField] private MapLooper mapLooper;
-    [SerializeField] private ItemSpawnManager spawnManager;
     [SerializeField] private CharacterSpawner characterSpawner;
 
     public int currentScore = 0;
     public int bestScore = 0;
+
+    private float time = 0;
 
     public bool isPlay;
     public bool isCrash;
@@ -24,42 +25,32 @@ public class GameManager : MonoBehaviour
         enemy.Move();
     }
 
-
-    private void Awake()
-    {
-        if (Instance != null)
-        {
-            Destroy(gameObject);
-            return;
-        }
-
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
-    }
-
     private void Start()
     {
         bestScore = PlayerPrefs.GetInt("BestScore", bestScore);
-        //spawnManager.PlaceItems();
-        //characterSpawner.SpawnCharacter();
+        characterSpawner.SpawnCharacter();
     }
 
     private void Update()
     {
         if (!isPlay)
             return;
+        SpeedUp();
     }
 
     public void GameStart()
     {
         currentScore = 0;
         isPlay = true;
-        spawnManager.PlaceItems();
     }
 
     public void SpeedUp()
     {
-        //mapLooper.
+        time += Time.deltaTime;
+        if (time > 30)
+        {
+            //mapLooper.
+        }
     }
 
     public void AddScore(int value)

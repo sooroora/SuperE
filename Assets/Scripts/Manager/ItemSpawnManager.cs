@@ -6,6 +6,8 @@ using UnityEngine.Splines;
 
 public class ItemSpawnManager : MonoBehaviour
 {
+    public static ItemSpawnManager Instance;
+
     public GameObject coinPrefab;
     public GameObject speedItemPrefab;
     public SplineContainer SplineContainer;
