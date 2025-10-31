@@ -7,36 +7,55 @@ public class MapLooper : MonoBehaviour
 {
     [SerializeField] private GameObject movingPivot;
     [SerializeField] private Transform movingPosition;
-    [SerializeField] private Transform lastMovePosition;
+    [SerializeField] private Transform mapDestroyPosition;
+    [SerializeField] private Transform LastPivot;
+    
+    
+    [Header("option")]
     [SerializeField] private float speed;
     [SerializeField] List<MapPiece> mapPieces;
-    [SerializeField] private Transform LastPivot;
     [SerializeField] private float width;
     [SerializeField] private float spawnDistance;
+    
+    
 
 
     private bool hasSpawned = false;
     private void Start()
     {
-
-        BackgroundInstatiate();
+        BackgroundInstatiate(this.transform);
     }
+    
     private void Update()
     {
         Move();
-        NewMove();
+        SpawnNewMapPiece();
+        CheckBackgroundDestroy();
 
     }
-    public void BackgroundInstatiate()
+    public void BackgroundInstatiate(Transform nowTransform)
     {
         var randomBackground = mapPieces[Random.Range(0, mapPieces.Count)];
 
-       MapPiece clone = Instantiate(randomBackground, transform.position, Quaternion.identity);
-        if (movingPosition.transform.position.x <= lastMovePosition.transform.position.x)
-        {
-            Destroy(clone);
-        }
+       MapPiece clone = Instantiate(randomBackground, nowTransform.position, Quaternion.identity);
+       LastPivot = clone.lastPivot;
+       
+       clone.transform.SetParent(movingPosition);
+       
 
+    }
+
+    void CheckBackgroundDestroy()
+    {
+        
+        // clone 한 애들을 mapDestroyPosition이 넘으면 Destroy 할 수 있도록 구현 필요
+        
+        
+        // movingPoi
+        // if (movingPosition.transform.position.x <= mapDestroyPosition.transform.position.x)
+        // {
+        //     //Destroy(clone);
+        // }
     }
 
     public void Move()
@@ -47,16 +66,11 @@ public class MapLooper : MonoBehaviour
 
     }
 
-    public void NewMove()
+    public void SpawnNewMapPiece()
     {
-        if(movingPosition.transform.position.x <= lastMovePosition.transform.position.x && !hasSpawned)
+        if(LastPivot.transform.position.x <= mapDestroyPosition.transform.position.x)
         {
-
-            var randomBackground = mapPieces[Random.Range(0, mapPieces.Count)];
-
-            Instantiate(randomBackground, new Vector3(LastPivot.transform.position.x, transform.position.y, 0), Quaternion.identity);
-
-            hasSpawned = true;
+            BackgroundInstatiate(LastPivot.transform);
         }
   
     }

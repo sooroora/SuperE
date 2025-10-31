@@ -5,23 +5,7 @@ using UnityEngine;
 public class MapPiece : MonoBehaviour
 {
     public Transform lastPivot;
-   
-    private void Awake()
-    {
-
-    }
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
 
 
 }
-//¶ó½ºÆ®ÇÇº¿Àº À§Ä¡ °ªÀÌ´Ù.
+//ï¿½ï¿½Æ®ï¿½Çºï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ ï¿½ï¿½ï¿½Ì´ï¿½.
