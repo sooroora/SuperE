@@ -9,7 +9,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Player player;
     [SerializeField] private Enemy enemy;
     [SerializeField] private MapLooper mapLooper;
-    [SerializeField] private ItemSpawnManager spawnManager;
     [SerializeField] private CharacterSpawner characterSpawner;
 
     public int currentScore = 0;
@@ -42,7 +41,6 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         bestScore = PlayerPrefs.GetInt("BestScore", bestScore);
-        //spawnManager.PlaceItems();
         //characterSpawner.SpawnCharacter();
     }
 
@@ -57,7 +55,6 @@ public class GameManager : MonoBehaviour
     {
         currentScore = 0;
         isPlay = true;
-        spawnManager.PlaceItems();
     }
 
     public void SpeedUp()
