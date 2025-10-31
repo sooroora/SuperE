@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     [SerializeField] private GameOverUI gameOverUI;
+    [SerializeField] private InGameUI inGameUI;
     [SerializeField] private Player player;
     [SerializeField] private Enemy enemy;
     [SerializeField] private MapLooper mapLooper;
