@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
     public int currentScore = 0;
     public int bestScore = 0;
 
+    private float time = 0;
+
     public bool isPlay;
     public bool isCrash;
 
@@ -48,6 +50,7 @@ public class GameManager : MonoBehaviour
     {
         if (!isPlay)
             return;
+        SpeedUp();
     }
 
     public void GameStart()
@@ -59,7 +62,11 @@ public class GameManager : MonoBehaviour
 
     public void SpeedUp()
     {
-        //mapLooper.
+        time += Time.deltaTime;
+        if (time > 30)
+        {
+            //mapLooper.
+        }
     }
 
     public void AddScore(int value)
