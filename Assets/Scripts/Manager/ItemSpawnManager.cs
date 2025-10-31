@@ -6,7 +6,8 @@ using UnityEngine.Splines;
 
 public class ItemSpawnManager : MonoBehaviour
 {
-    public GameObject itemPrefab;
+    public GameObject coinPrefab;
+    public GameObject speedItemPrefab;
     public SplineContainer SplineContainer;
 
     public int poolSize = 1000;
@@ -28,24 +29,31 @@ public class ItemSpawnManager : MonoBehaviour
     {
         for (int i = 0; i < poolSize; i++)
         {
-            GameObject obj = Instantiate(itemPrefab);
-            obj.SetActive(false);
-            itemPool.Add(obj);
+            GameObject item = Instantiate(coinPrefab);
+            item.SetActive(false);
+            itemPool.Add(item);
         }
+        itemPool.Add(speedItemPrefab);
     }
 
     private GameObject GetPooledObject()
     {
-        foreach (var item in itemPool)
+        int randomIndex = Random.Range(0, itemPool.Count);
+        for (int i = 0; i < itemPool.Count; i++)
         {
-            if (!item.activeInHierarchy)
+            if (!itemPool[randomIndex].activeInHierarchy)
             {
-                item.SetActive(true);
-                return item;
+                itemPool[randomIndex].SetActive(true);
+                return itemPool[randomIndex];
+            }
+            else
+            {
+                randomIndex = (randomIndex + 1) % itemPool.Count;
             }
         }
 
-        GameObject newItem = Instantiate(itemPrefab);
+        GameObject newItem = Instantiate(coinPrefab);
+        newItem.SetActive(true);
         itemPool.Add(newItem);
         return newItem;
     }

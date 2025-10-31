@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
+
 
 public class InGameUI : MonoBehaviour
 {
     [Header("UI References")]
-    public Text scoreText;          
+    public TextMeshProUGUI scoreText;          
     public Button pauseButton;      
 
     private void Start()
