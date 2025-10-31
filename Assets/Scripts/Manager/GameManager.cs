@@ -25,23 +25,10 @@ public class GameManager : MonoBehaviour
         enemy.Move();
     }
 
-
-    private void Awake()
-    {
-        if (Instance != null)
-        {
-            Destroy(gameObject);
-            return;
-        }
-
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
-    }
-
     private void Start()
     {
         bestScore = PlayerPrefs.GetInt("BestScore", bestScore);
-        //characterSpawner.SpawnCharacter();
+        characterSpawner.SpawnCharacter();
     }
 
     private void Update()
