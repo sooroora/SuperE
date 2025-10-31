@@ -44,7 +44,7 @@ public class MapLooper : MonoBehaviour
          clone.transform.SetParent(movingPosition);
         if (LastPivot.transform.position.x <= mapDestroyPosition.transform.position.x)
         {
-            Destroy(clone.transform.SetParent(movingPosition));
+            //Destroy(clone.transform.SetParent(movingPosition));
         }
        
        
