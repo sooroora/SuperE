@@ -37,7 +37,10 @@ public class MapLooperTemp : MonoBehaviour
         int removeCount = mapPieces.RemoveAll(map =>
         {
             if (map.transform.position.x <= this.transform.position.x - 10)
+            {
+                Destroy(map.gameObject);
                 return true;
+            }
             return false;
         });
 
