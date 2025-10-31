@@ -7,23 +7,24 @@ using UnityEngine;
 
 public static class PlayerPrefsManager
 {
-    public static int? GetIntValue<T>(T key) where T : Enum
+    public static int GetIntValue<T>(T key) where T : Enum
     {
         if (PlayerPrefs.HasKey(key.ToString()))
         {
             return PlayerPrefs.GetInt(key.ToString());
         }
-        return null;
+        return 0;
     }
     
-    public static float? GetFloatValue<T>(T key) where T : Enum
+    // 나중에 바꿔야함
+    public static float GetFloatValue<T>(T key) where T : Enum
     {
         if (PlayerPrefs.HasKey(key.ToString()))
         {
             return PlayerPrefs.GetFloat(key.ToString());
         }
 
-        return null;
+        return 1.0f;
     }
 
     public static string GetStringValue<T>(T key) where T : Enum
