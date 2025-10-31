@@ -2,10 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Jaewoo : CharacterBase
+public class Jaewoo : Player
 {
-    public override void Skill()
-    {
-
-    }
 }

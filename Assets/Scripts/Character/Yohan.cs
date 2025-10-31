@@ -2,10 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Yohan : CharacterBase
+public class Yohan : Player
 {
-    public override void Skill()
-    {
-
-    }
 }

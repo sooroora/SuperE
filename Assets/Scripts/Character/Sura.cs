@@ -2,10 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Sura : CharacterBase
+public class Sura : Player
 {
-    public override void Skill()
-    {
-
-    }
 }

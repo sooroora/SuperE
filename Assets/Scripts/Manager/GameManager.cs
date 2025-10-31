@@ -6,12 +6,11 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    [SerializeField] private GameOverUI gameOverUI;
-    [SerializeField] private InGameUI inGameUI;
     [SerializeField] private Player player;
     [SerializeField] private Enemy enemy;
     [SerializeField] private MapLooper mapLooper;
     [SerializeField] private ItemSpawnManager spawnManager;
+    [SerializeField] private CharacterSpawner characterSpawner;
 
     public int currentScore = 0;
     public int bestScore = 0;
@@ -42,6 +41,7 @@ public class GameManager : MonoBehaviour
     {
         bestScore = PlayerPrefs.GetInt("BestScore", bestScore);
         spawnManager.PlaceItems();
+        characterSpawner.SpawnCharacter();
     }
 
     private void Update()
@@ -65,7 +65,7 @@ public class GameManager : MonoBehaviour
     public void AddScore(int value)
     {
         currentScore += value;
-        //UI
+        InGameUIManager.Instance.UpdateScore(currentScore);
     }
 
     public void GameOver()
@@ -78,7 +78,7 @@ public class GameManager : MonoBehaviour
             PlayerPrefs.SetInt("BestScore", bestScore);
         }
 
-        gameOverUI.Show(currentScore, bestScore);
+        InGameUIManager.Instance.SetGameOver(currentScore, bestScore);
     }
 
     public void RestartGame()
