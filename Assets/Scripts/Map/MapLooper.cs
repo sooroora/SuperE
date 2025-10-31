@@ -31,6 +31,7 @@ public class MapLooper : MonoBehaviour
     {
         Move();
         SpawnNewMapPiece();
+        //BackgroundInstatiate(movingPosition);
         CheckBackgroundDestroy();
 
     }
@@ -38,29 +39,33 @@ public class MapLooper : MonoBehaviour
     {
         var randomBackground = mapPieces[Random.Range(0, mapPieces.Count)];
 
-       MapPiece clone = Instantiate(randomBackground, nowTransform.position, Quaternion.identity);
-       LastPivot = clone.lastPivot;
+        MapPiece clone = Instantiate(randomBackground, nowTransform.position, Quaternion.identity);
+        LastPivot = clone.lastPivot;
+         clone.transform.SetParent(movingPosition);
+        if (LastPivot.transform.position.x <= mapDestroyPosition.transform.position.x)
+        {
+            Destroy(clone.transform.SetParent(movingPosition));
+        }
        
-       clone.transform.SetParent(movingPosition);
        
 
     }
 
     void CheckBackgroundDestroy()
     {
-        
+
         // clone 한 애들을 mapDestroyPosition이 넘으면 Destroy 할 수 있도록 구현 필요
-        if(mapDestroyPosition.position.x > movingPosition.position.x)
+        if (mapDestroyPosition.position.x > movingPosition.position.x)
         {
-            
-            Destroy(LastPivot.gameObject);
+
+            Destroy(LastPivot.transform);
         }
-        
-        // movingPoi
+
+        //void movingPosition()
         // if (movingPosition.transform.position.x <= mapDestroyPosition.transform.position.x)
-        // {
-        //     //Destroy(clone);
-        // }
+        //{
+        //    Destroy(clone);
+        //}
     }
 
     public void Move()
@@ -68,19 +73,22 @@ public class MapLooper : MonoBehaviour
         Vector3 pos = movingPivot.transform.position;
         pos.x -= speed * Time.deltaTime;
         movingPivot.transform.position = pos;
-
+        
     }
 
     public void SpawnNewMapPiece()
     {
-        if(LastPivot.transform.position.x <= mapDestroyPosition.transform.position.x)
+        //Debug.Log("Last"+ LastPivot.transform.position.x);
+        //Debug.Log("destroy" + mapDestroyPosition.transform.position.x);
+        if (LastPivot.transform.position.x <= mapDestroyPosition.transform.position.x)
         {
             BackgroundInstatiate(LastPivot.transform);
+            
         }
-  
+
     }
 
-   
+}  
 
 
-}
+
