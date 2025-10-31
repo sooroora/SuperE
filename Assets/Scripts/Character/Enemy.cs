@@ -4,7 +4,7 @@ using UnityEditor;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 
-public class Enemy : Character
+public class Enemy : MonoBehaviour
 {
     protected bool speedUp = false;
     protected Vector3 right = Vector3.zero;//오브젝트를 오른쪽으로 이동시키기 위한 변수

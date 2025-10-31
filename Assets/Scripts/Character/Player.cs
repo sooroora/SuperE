@@ -2,19 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : Character
+public class Player : MonoBehaviour
 {
     public float flapForce = 20f; //점프력
     public bool isFlap = false; //점프유무 확인
-    private Rigidbody2D _rigidbody; // 물리엔진 변수값
-    private int jumpCount = 2; // 점프횟수
-    private CapsuleCollider2D PlayerSize; // 캐릭터 사이즈 변수
-    private Vector3 ori; // 캐릭터 사이즈를 저장하기 위한 변수
-    private Vector3 slide;// 캐릭터가 슬라이드시 사이즈를 줄이기 위한 변수
-    private Animator animator; // 애니메이터 변수
+    protected Rigidbody2D _rigidbody; // 물리엔진 변수값
+    protected int jumpCount = 2; // 점프횟수
+    protected CapsuleCollider2D PlayerSize; // 캐릭터 사이즈 변수
+    protected Vector3 ori; // 캐릭터 사이즈를 저장하기 위한 변수
+    protected Vector3 slide;// 캐릭터가 슬라이드시 사이즈를 줄이기 위한 변수
+    protected Animator animator; // 애니메이터 변수
 
     // Start is called before the first frame update
-    void Start()
+    protected virtual void Start()
     {
         PlayerSize = GetComponent<CapsuleCollider2D>();
         _rigidbody = GetComponent<Rigidbody2D>();
@@ -25,11 +25,11 @@ public class Player : Character
     }
 
     // Update is called once per frame
-    void Update()
+    protected virtual void Update()
     {
         if (Input.GetKeyDown(KeyCode.LeftAlt)) //alt 키 입력시 1번은 점프 2번은 더블점프 
         {
-            if (jumpCount == 2) //점프
+            if (jumpCount >= 2) //점프
             {
                 animator.SetBool("IsJump", true);
                 _rigidbody.velocity = Vector3.up * flapForce;
@@ -65,8 +65,8 @@ public class Player : Character
             PlayerSize.size = ori;
         }
     }
-    
-    private void OnTriggerEnter2D(Collider2D collision) 
+
+    protected virtual void OnTriggerEnter2D(Collider2D collision) 
     {
         if (collision.CompareTag("Obstacle")) //플레이어가 충돌시 벽 인지 체크
         {
@@ -79,7 +79,7 @@ public class Player : Character
         //    
         //}
     }
-    private void OnCollisionEnter2D(Collision2D collision) 
+    protected virtual void OnCollisionEnter2D(Collision2D collision) 
     {
         if (collision.gameObject.CompareTag("Floor")) //플레이어가 충돌한것이 Floor인지 확인
         {
