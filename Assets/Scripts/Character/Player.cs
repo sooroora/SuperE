@@ -46,12 +46,21 @@ public class Player : Character
         }
         if (Input.GetKey(KeyCode.Z)) //슬라이딩 유무 
         {
-            animator.SetBool("IsSliding", true);
-            PlayerSize.size = slide;
+            if (animator.GetBool("IsJump") || animator.GetBool("IsDubleJump"))
+            {
+                return;
+            }
+            else
+            {
+                animator.SetBool("IsSliding", true);
+                PlayerSize.size = slide;
+            }
+                
             
         }
         else 
         {
+
             animator.SetBool("IsSliding", false);
             PlayerSize.size = ori;
         }
