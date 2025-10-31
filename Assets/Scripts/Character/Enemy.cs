@@ -27,7 +27,7 @@ public class Enemy : MonoBehaviour
     }
     public void Move() // 충돌시 플레이어와의 거리를 줄이기 위한 로직
     {
-        transform.position = Vector3.SmoothDamp(transform.position, right, ref rightSpeed, 1.0f);
+        transform.position = Vector3.SmoothDamp(transform.position,transform.position + Vector3.right, ref rightSpeed, 3.0f);
 
         if (Vector3.Distance(transform.position, right) < 0.1f)
         {
