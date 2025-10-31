@@ -49,12 +49,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movingPivot: {fileID: 531983891088330395}
   movingPosition: {fileID: 2243022302825050543}
-  lastMovePosition: {fileID: 2521039946774337343}
+  mapDestroyPosition: {fileID: 0}
+  LastPivot: {fileID: 4808311369449810693}
   speed: 5
   mapPieces:
   - {fileID: 3883664330164309117}
-  LastPivot: {fileID: 4808311369449810693}
   width: 30
+  spawnDistance: 0
 --- !u!50 &2946152933686629860
 Rigidbody2D:
   serializedVersion: 4
@@ -362,7 +363,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0.22, z: 0}
-  m_LocalScale: {x: 17.626648, y: 1.3559, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3863856298478364480}
@@ -411,7 +412,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.76, y: 0.5000001, z: 0}
-  m_LocalScale: {x: 1.40156, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4560621977162016704}
@@ -606,7 +607,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.78803116, y: 3.1700003, z: 0}
-  m_LocalScale: {x: 0.12614043, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4560621977162016704}
@@ -656,8 +657,8 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_DrawMode: 1
+  m_Size: {x: 0.2, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -774,7 +775,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1.4631257, y: 0.051626354, z: -0.033579078}
-  m_LocalScale: {x: 0.056732286, y: 0.73751754, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4560621977162016704}
@@ -851,7 +852,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0.22, z: 0}
-  m_LocalScale: {x: 17.626648, y: 1.3559, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 90369030196040058}

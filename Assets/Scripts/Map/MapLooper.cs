@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -49,7 +50,11 @@ public class MapLooper : MonoBehaviour
     {
         
         // clone 한 애들을 mapDestroyPosition이 넘으면 Destroy 할 수 있도록 구현 필요
-        
+        if(mapDestroyPosition.position.x > movingPosition.position.x)
+        {
+            
+            Destroy(LastPivot.gameObject);
+        }
         
         // movingPoi
         // if (movingPosition.transform.position.x <= mapDestroyPosition.transform.position.x)
