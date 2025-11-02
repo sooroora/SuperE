@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BasePet : MonoBehaviour
+public abstract class BasePet : MonoBehaviour
 {
     private Player player;
-    [SerializeField] private Vector3 offset = new Vector3(-1, -1, 0);
+    [SerializeField] private Vector3 offset = new Vector3(-1, 1, 0);
 
     private void OnEnable()
     {
@@ -29,4 +29,6 @@ public class BasePet : MonoBehaviour
             transform.position = player.transform.position + offset;
         }
     }
+
+    public abstract void PetSkill();
 }
