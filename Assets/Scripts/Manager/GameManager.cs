@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    [SerializeField] private Player player;
+    public Player player;
     [SerializeField] private Enemy enemy;
     [SerializeField] private MapLooper mapLooper;
     [SerializeField] private CharacterSpawner characterSpawner;
@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         bestScore = PlayerPrefs.GetInt("BestScore", bestScore);
-        characterSpawner.SpawnCharacter();
+        player = characterSpawner.SpawnCharacter();
     }
 
     private void Update()
