@@ -69,7 +69,7 @@ public class Player : MonoBehaviour
 
     protected virtual void OnTriggerEnter2D(Collider2D collision) 
     {
-        if (collision.CompareTag("Obstacle")) //플레이어가 충돌시 벽 인지 체크
+        if (collision.GetComponent<Obstacle>() != null) //플레이어가 충돌시 벽 인지 체크
         {
             GameManager.Instance.Crash();
         }
