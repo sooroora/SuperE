@@ -15,7 +15,9 @@ public class Item : MonoBehaviour
             // 이게 더 깔끔한듯...?
             // 아이템 풀링을 만들어야겠다
             SoundManager.Instance.PlaySfxOnce(ESfxName.Click);
-            GameManager.Instance.AddScore(score);
+            //GameManager.Instance.AddScore(score);
+            this.gameObject.transform.parent = null;
+            this.gameObject.SetActive(false);
             
             
         }

@@ -12,7 +12,7 @@ public class ItemSpawnManager : MonoBehaviour
     public GameObject speedItemPrefab;
     public SplineContainer SplineContainer;
 
-    public int poolSize = 1000;
+    public int poolSize = 100;
 
     [Header("Place Option")]
     public float itemSpace = 1.0f;
@@ -24,6 +24,8 @@ public class ItemSpawnManager : MonoBehaviour
 
     private void Awake()
     {
+        if(Instance == null)
+            Instance = this;
         InitializePool();
     }
 
@@ -35,23 +37,23 @@ public class ItemSpawnManager : MonoBehaviour
             item.SetActive(false);
             itemPool.Add(item);
         }
-        itemPool.Add(speedItemPrefab);
+        //itemPool.Add(speedItemPrefab);
     }
 
     private GameObject GetPooledObject()
     {
-        int randomIndex = Random.Range(0, itemPool.Count);
+        //int randomIndex = Random.Range(0, itemPool.Count);
         for (int i = 0; i < itemPool.Count; i++)
         {
-            if (!itemPool[randomIndex].activeInHierarchy)
+            if (!itemPool[i].activeInHierarchy)
             {
-                itemPool[randomIndex].SetActive(true);
-                return itemPool[randomIndex];
+                itemPool[i].SetActive(true);
+                return itemPool[i];
             }
-            else
-            {
-                randomIndex = (randomIndex + 1) % itemPool.Count;
-            }
+            // else
+            // {
+            //     randomIndex = (randomIndex + 1) % itemPool.Count;
+            // }
         }
 
         GameObject newItem = Instantiate(coinPrefab);
@@ -60,9 +62,10 @@ public class ItemSpawnManager : MonoBehaviour
         return newItem;
     }
 
-    public void PlaceItems()
+    public void PlaceItems(SplineContainer mapSpline)
     {
-        List<Spline> splines = SplineContainer.Splines.ToList();
+        List<Spline> splines = mapSpline.Splines.ToList();
+            //SplineContainer.Splines.ToList();
 
         for (int k = 0; k < splines.Count; k++)
         {
@@ -73,13 +76,15 @@ public class ItemSpawnManager : MonoBehaviour
                 float t = i / (float)(spawnCount - 1);
 
                 Vector3 pos = splines[k].EvaluatePosition(t);
-                Vector3 worldPos = SplineContainer.transform.TransformPoint(pos);
+                Vector3 worldPos = mapSpline.transform.TransformPoint(pos);
 
                 for (int j = 0; j < verticalCount; j++)
                 {
                     Vector3 verticalPos = worldPos + Vector3.up * (verticalSpace * Mathf.Ceil(j / 2f) * (j % 2 == 0 ? -1 : 1));
 
-                    GetPooledObject();
+                    GameObject spawnedItem = GetPooledObject();
+                    spawnedItem.transform.position = verticalPos;
+                    spawnedItem.transform.SetParent(mapSpline.transform);
                 }
             }
         }
