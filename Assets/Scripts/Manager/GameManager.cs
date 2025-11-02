@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -19,6 +20,8 @@ public class GameManager : MonoBehaviour
     public bool isPlay;
     public bool isCrash;
 
+    public event Action<Player> OnPlayerSpawned;
+
     public void Crash()
     {
         isCrash = true;
@@ -29,6 +32,7 @@ public class GameManager : MonoBehaviour
     {
         bestScore = PlayerPrefs.GetInt("BestScore", bestScore);
         player = characterSpawner.SpawnCharacter();
+        OnPlayerSpawned?.Invoke(player);
     }
 
     private void Update()

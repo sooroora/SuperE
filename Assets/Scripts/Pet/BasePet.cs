@@ -4,15 +4,29 @@ using UnityEngine;
 
 public class BasePet : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private Player player;
+    [SerializeField] private Vector3 offset = new Vector3(-1, -1, 0);
+
+    private void OnEnable()
     {
-        
+        GameManager.Instance.OnPlayerSpawned += HandlePlayerSpawned;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDisable()
     {
-        
+        GameManager.Instance.OnPlayerSpawned -= HandlePlayerSpawned;
+    }
+
+    private void HandlePlayerSpawned(Player spawnedPlayer)
+    {
+        player = spawnedPlayer;
+    }
+
+    private void LateUpdate()
+    {
+        if (player != null)
+        {
+            transform.position = player.transform.position + offset;
+        }
     }
 }
