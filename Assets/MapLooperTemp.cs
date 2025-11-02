@@ -65,32 +65,11 @@ public class MapLooperTemp : MonoBehaviour
             return false;
         });
 
-        //toDestroy.Add(map.gameObject);
-        //toDestroy.ForEach(Destroy);
-
-
         if (destroyCount > 0)
         {
             SpawnNewMapPiece(lastPivot);
         }
         
-        // if (toDestroy.Count > 0)
-        // {
-        //     StartCoroutine(
-        //         Utility.NextFrame(() =>
-        //         {
-        //             mapPieces.RemoveAll(remove =>
-        //             {
-        //                 if (toDestroy.Contains(remove))
-        //                     return true;
-        //                 return false;
-        //             });
-        //             toDestroy.ForEach(target => Destroy(target.gameObject));
-        //             mapPieces.RemoveAll(map => map == null ? true : false);
-        //         }));
-        //     
-        //     SpawnNewMapPiece(lastPivot);
-        // }
     }
 
     public void SpawnNewMapPiece(Transform pieceTransform)
