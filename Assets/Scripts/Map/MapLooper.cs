@@ -112,11 +112,12 @@ public class MapLooper : MonoBehaviour
 
     public void StartMap()
     {
-        Debug.Log(Camera.main.transform.position);
+        
         Vector2 pos = BaceGround.transform.position;
         pos.x -= speed * Time.deltaTime;
         BaceGround.transform.position = pos;
-        Debug.Log(pos.x);
+        
     }
+    
 }
 
