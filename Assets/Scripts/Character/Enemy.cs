@@ -30,7 +30,7 @@ public class Enemy : MonoBehaviour
     }
     public void Update()
     {
-        if (GameManager.Instance.RemainingDistance > 0.1f)
+        if (GameManager.Instance.RemainingDistance < 0.1f)
         {
             GameManager.Instance.GameOver();
         }
