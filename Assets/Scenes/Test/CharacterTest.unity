@@ -285,7 +285,6 @@ MonoBehaviour:
   player: {fileID: 0}
   enemy: {fileID: 1833767235}
   mapLooper: {fileID: 0}
-  spawnManager: {fileID: 0}
   characterSpawner: {fileID: 0}
   currentScore: 0
   bestScore: 0
@@ -421,6 +420,7 @@ GameObject:
   - component: {fileID: 936830641}
   - component: {fileID: 936830640}
   - component: {fileID: 936830639}
+  - component: {fileID: 936830642}
   m_Layer: 0
   m_Name: Obstacle
   m_TagString: Obstacle
@@ -534,12 +534,24 @@ Transform:
   m_GameObject: {fileID: 936830638}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.91, y: 0.35, z: 0}
+  m_LocalPosition: {x: -2.99, y: 0.35, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &936830642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936830638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52969e73a4a9ce34ba45eef5bbd8dcc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1029873856
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -548,6 +560,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4881626419976170967, guid: 62e023bd2bde44542a005b92ed57e2a1, type: 3}
+      propertyPath: enemy
+      value: 
+      objectReference: {fileID: 1833767235}
     - target: {fileID: 5733023819502272400, guid: 62e023bd2bde44542a005b92ed57e2a1, type: 3}
       propertyPath: m_Name
       value: Player_yohan
@@ -611,7 +627,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6424733476666816879, guid: ccaa96b6bc928ff4195089cea86438e2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -15.35
+      value: -6.14
       objectReference: {fileID: 0}
     - target: {fileID: 6424733476666816879, guid: ccaa96b6bc928ff4195089cea86438e2, type: 3}
       propertyPath: m_LocalPosition.y
