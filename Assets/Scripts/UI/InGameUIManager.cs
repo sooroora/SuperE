@@ -15,9 +15,13 @@ public class InGameUIManager : MonoBehaviour
 
         Instance = this;
         
+        // gameOverUI = this.gameObject.GetComponentInChildren<GameOverUI>();
+        // inGameUI = this.gameObject.GetComponentInChildren<InGameUI>();
     }
-    GameOverUI gameOverUI;
-    InGameUI inGameUI;
+    
+    [SerializeField] GameOverUI gameOverUI;
+    [SerializeField] InGameUI inGameUI;
+    
     public void SetGameOver(int score, int bestScore)
     {
         gameOverUI.Show(score, bestScore);
