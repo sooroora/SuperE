@@ -69,7 +69,6 @@ public class Player : MonoBehaviour
             {
                 animator.SetBool("Hited", true);
                 GameManager.Instance.Crash();
-                animator.SetBool("Hited", true);
             }
         }
         //else if()//아이템 사용
