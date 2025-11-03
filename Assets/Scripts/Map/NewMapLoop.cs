@@ -23,10 +23,14 @@ public class NewMapLoop : MonoBehaviour
     {
 
 
-        
-        Rispone(null);
-        Rispone(null);
-        Rispone(null);
+
+        Respawn(null);
+        Respawn(null);
+        Respawn(null);
+        Respawn(null);
+        Respawn(null);
+        Respawn(null);
+        Respawn(null);
     }
 
     // Update is called once per frame
@@ -38,7 +42,7 @@ public class NewMapLoop : MonoBehaviour
 
 
     }
-    public void Rispone(MapPiece mapPiece)
+    public void Respawn(MapPiece mapPiece)
     {
         // 생성할 프리팹을 고른다.
         // 마지막 생성된 맵 뒤에 새로운 맵을 생성한다.
@@ -87,7 +91,7 @@ public class NewMapLoop : MonoBehaviour
 
                 // Destroy(map.gameObject);
                 // 리스폰
-                Rispone(piece);
+                Respawn(piece);
             }
         }
 

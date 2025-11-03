@@ -9,19 +9,23 @@ public class GameManager : MonoBehaviour
 
     public Player player;
     public Enemy enemy;
+    public BasePet pet;
+
     [SerializeField] private MapLooper mapLooper;
     [SerializeField] private CharacterSpawner characterSpawner;
     [SerializeField] private EnemySpawner enemySpawner;
+    [SerializeField] private PetSpawner petSpawner;
 
-    public int currentScore = 0;
-    public int bestScore = 0;
+    private int currentScore = 0;
+    private int bestScore = 0;
 
     private float time = 0;
+    [SerializeField] private float levelSpeedUp = 6;
 
     public bool isPlay;
     public bool isCrash;
 
-    public event Action<Player> OnPlayerSpawned;
+    public float RemainingDistance { get; private set; }
 
     private void Awake()
     {
@@ -33,15 +37,28 @@ public class GameManager : MonoBehaviour
     {
         bestScore = PlayerPrefs.GetInt("BestScore", bestScore);
         player = characterSpawner.SpawnCharacter();
-        OnPlayerSpawned?.Invoke(player);
         enemy = enemySpawner.SpawnEnemy();
+        pet = petSpawner.SpawnPet(player);
+
+        GameStart();
     }
 
     private void Update()
     {
         if (!isPlay)
+        {
+            RemainingDistance = 0;
+            mapLooper.SetSpeed(0);
             return;
-        SpeedUp();
+        }
+
+        RemainingDistance = player.transform.position.x - enemy.transform.position.x;
+
+        time += Time.deltaTime;
+        if (time > 30)
+        {
+            MapSpeedUp();
+        }
     }
 
     public void GameStart()
@@ -52,17 +69,17 @@ public class GameManager : MonoBehaviour
 
     public void Crash()
     {
-        isCrash = true;
-        enemy.Move();
+        enemy.Approach();
     }
 
-    public void SpeedUp()
+    public void PlayerSpeedUp()
     {
-        time += Time.deltaTime;
-        if (time > 30)
-        {
-            //mapLooper.
-        }
+        enemy.Retreat();
+    }
+
+    public void MapSpeedUp()
+    {
+        mapLooper.SetSpeed(levelSpeedUp);
     }
 
     public void AddScore(int value)

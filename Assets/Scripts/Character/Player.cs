@@ -12,7 +12,6 @@ public class Player : MonoBehaviour
     protected Vector3 ori; // 캐릭터 사이즈를 저장하기 위한 변수
     protected Vector3 slide;// 캐릭터가 슬라이드시 사이즈를 줄이기 위한 변수
     protected Animator animator; // 애니메이터 변수
-    
 
     // Start is called before the first frame update
     protected virtual void Start()
@@ -22,7 +21,6 @@ public class Player : MonoBehaviour
         animator = GetComponent<Animator>();
         ori = PlayerSize.size; //플레이어의 원래 사이즈를 담음
         slide = PlayerSize.size * 0.5f; // 플레이어 사이즈를 절반으로 줄여서 담음
-
     }
 
     // Update is called once per frame
@@ -43,7 +41,6 @@ public class Player : MonoBehaviour
                 jumpCount--;
             }
             else return;
-            
         }
         if (Input.GetKey(KeyCode.Z)) //슬라이딩 유무 
         {
@@ -56,8 +53,6 @@ public class Player : MonoBehaviour
                 animator.SetBool("IsSliding", true);
                 PlayerSize.size = slide;
             }
-                
-            
         }
         else 
         {
@@ -66,18 +61,19 @@ public class Player : MonoBehaviour
             PlayerSize.size = ori;
         }
     }
-
     protected virtual void OnTriggerEnter2D(Collider2D collision) 
     {
-        if (collision.GetComponent<Obstacle>() != null) //플레이어가 충돌시 벽 인지 체크
+        if (!animator.GetBool("Hited"))
         {
-            GameManager.Instance.Crash();
+            if (collision.GetComponent<Obstacle>() != null) //플레이어가 충돌시 벽 인지 체크
+            {
+                GameManager.Instance.Crash();
+            }
         }
-
-        else //아이템 사용
+        //else if()//아이템 사용
+        else
         {
-
-
+            return;
         }
     }
     protected virtual void OnCollisionEnter2D(Collision2D collision) 
@@ -88,6 +84,9 @@ public class Player : MonoBehaviour
             animator.SetBool("IsJump", false); // 점프 애니메이터 종료
             jumpCount = 2; // 점프를 했다면 점프횟수를 돌려주기 위한 변수
         }
-
+    }
+    public void StarpedAnimataion()
+    {
+        animator.SetBool("Hited", false);
     }
 }

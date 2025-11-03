@@ -7,19 +7,23 @@ public class Sura : Player
 {
     protected override void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.GetComponent<Obstacle>() != null) //플레이어가 충돌시 벽 인지 체크
+        if (!animator.GetBool("Hited"))
         {
-            int destroy = Random.Range(1, 11);
-            Debug.Log(destroy);
-            if (destroy <= 3)
+            if (collision.GetComponent<Obstacle>() != null) //플레이어가 충돌시 벽 인지 체크
             {
-                Destroy(collision.gameObject);
+                int destroy = Random.Range(1, 11);
+                Debug.Log(destroy);
+                if (destroy <= 3)
+                {
+                    Destroy(collision.gameObject);
+                }
+                else
+                {
+                    GameManager.Instance.Crash();
+                }
+
             }
-            else
-            {
-                GameManager.Instance.Crash();
-            }
-                
         }
+            
     }
 }

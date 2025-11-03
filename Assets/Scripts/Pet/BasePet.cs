@@ -7,19 +7,16 @@ public abstract class BasePet : MonoBehaviour
     private Player player;
     [SerializeField] private Vector3 offset = new Vector3(-1, 1, 0);
 
-    private void OnEnable()
+    public void Init(Player player)
     {
-        GameManager.Instance.OnPlayerSpawned += HandlePlayerSpawned;
-    }
-
-    private void OnDisable()
-    {
-        GameManager.Instance.OnPlayerSpawned -= HandlePlayerSpawned;
-    }
-
-    private void HandlePlayerSpawned(Player spawnedPlayer)
-    {
-        player = spawnedPlayer;
+        if (player != null)
+        {
+            this.player = player;
+        }
+        else
+        {
+            Debug.LogError($"Player가 없습니다");
+        }
     }
 
     private void LateUpdate()
