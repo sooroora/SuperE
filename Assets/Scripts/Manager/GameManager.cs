@@ -22,10 +22,10 @@ public class GameManager : MonoBehaviour
 
     public event Action<Player> OnPlayerSpawned;
 
-    public void Crash()
+    private void Awake()
     {
-        isCrash = true;
-        enemy.Move();
+        if (Instance == null)
+            Instance = this;
     }
 
     private void Start()
@@ -46,6 +46,12 @@ public class GameManager : MonoBehaviour
     {
         currentScore = 0;
         isPlay = true;
+    }
+
+    public void Crash()
+    {
+        isCrash = true;
+        enemy.Move();
     }
 
     public void SpeedUp()
