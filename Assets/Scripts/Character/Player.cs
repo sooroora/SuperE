@@ -68,6 +68,7 @@ public class Player : MonoBehaviour
             if (collision.GetComponent<Obstacle>() != null) //플레이어가 충돌시 벽 인지 체크
             {
                 GameManager.Instance.Crash();
+                animator.SetBool("Hited", true);
             }
         }
         //else if()//아이템 사용

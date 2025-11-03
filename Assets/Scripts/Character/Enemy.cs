@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] Vector3 enemyDistance = new Vector3(0.5f , 0 , 0);
     private Vector3 speed = Vector3.zero; //이속을 위한 변수
-    
+
     public void Approach()
     {
         Vector3 targetPosition = transform.position + enemyDistance;
