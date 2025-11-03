@@ -31,8 +31,8 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         bestScore = PlayerPrefs.GetInt("BestScore", bestScore);
-        player = characterSpawner.SpawnCharacter();
-        OnPlayerSpawned?.Invoke(player);
+        //player = characterSpawner.SpawnCharacter();
+       // OnPlayerSpawned?.Invoke(player);
     }
 
     private void Update()
