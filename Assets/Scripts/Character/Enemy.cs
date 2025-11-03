@@ -37,7 +37,6 @@ public class Enemy : MonoBehaviour
     protected void Back() // 스피드업 아이템을 먹었을때 거리를 벌리기 위한 로직
     {
         transform.position = Vector3.SmoothDamp(transform.position, left, ref leftSpeed, 1.0f);
-
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
