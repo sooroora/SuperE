@@ -6,8 +6,8 @@ using UnityEngine.UIElements;
 
 public class MapLooper : MonoBehaviour
 {
-    [SerializeField] private GameObject movingPivot;
-    [SerializeField] private Transform movingPosition;
+    [SerializeField] private GameObject movingPivot; //이동 역할
+    [SerializeField] private Transform movingPosition;//
     [SerializeField] private Transform mapDestroyPosition;
     [SerializeField] private Transform LastPivot;
     
