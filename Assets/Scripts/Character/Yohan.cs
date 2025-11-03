@@ -16,12 +16,9 @@ public class Yohan : Player
     private void FixedUpdate()
     {
         Collider2D[] hits = Physics2D.OverlapCircleAll(Player.position, 4f, item);
-        
         foreach (Collider2D hit in hits)
         {
-           
             hit.transform.position = Vector3.SmoothDamp(hit.transform.position, Player.position + Vector3.right, ref Speed, 5.0f);
-            
         }
     }
     private void OnDrawGizmosSelected()
