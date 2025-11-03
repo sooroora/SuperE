@@ -4,27 +4,26 @@ using UnityEngine;
 
 public class NewMapLoop : MonoBehaviour
 {
-    [SerializeField] private Transform mapDestroyPosition;
+    [SerializeField] private Transform mapDestroyPosition; //포지션 x값이 같으면 삭제
 
     [Header("option")]
 
-    [SerializeField] private GameObject mapPiecePrefab;      // 생성할 맵의 원본 -> 원본 들
+    [SerializeField] private List<GameObject> mapPiecePrefab;      // 생성할 맵의 원본 -> 원본 들
 
     [SerializeField] private float speed;
     [SerializeField] private GameObject movingPivot;    // 이동의 주체
 
     [SerializeField] List<MapPiece> mapPieces;  // 생성된 맵들
-    
-    
-    
+    [SerializeField] private GameObject BaceGround;
+    private int probability;
+    [SerializeField] private float lastPosy;
     
     
     void Start()
     {
 
 
-        // mapPieseSetParse = transform.SetParent(movingPivot);
-        // Rispone(movingPivot.transform);
+        
         Rispone(null);
         Rispone(null);
         Rispone(null);
@@ -33,6 +32,7 @@ public class NewMapLoop : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        StartMap();
         MovePivot();
         DestroyBackground();
 
@@ -56,65 +56,61 @@ public class NewMapLoop : MonoBehaviour
 
 
         // 새로운 맵 생성
-        GameObject prefab = mapPiecePrefab;
+        
+        GameObject prefab = mapPiecePrefab[Random.Range(0,mapPiecePrefab.Count)];         //프레펩이름의 게임오브젝트 생성
         GameObject go = Instantiate(prefab);        // 클론 생성
 
         // 마지막 맵
-        float lastPosX = 0;
+        float lastPosX = 0; //x의 위치 값 변경시 같이 이동이 됨
 
         if (mapPieces.Count >= 1)   // 1개라도 맵이 생성 되어 있으면
         {
-            MapPiece lastPiece = mapPieces[mapPieces.Count - 1];
+            MapPiece lastPiece = mapPieces[mapPieces.Count - 1]; //mapPieces의 리스트수를?? -1을 해라 앞에서 리스트가 삭제되었기 때문에
             lastPosX = lastPiece.GetLastPivotX();          // 다음 생성 위치
         }
 
         go.transform.SetParent(movingPivot.transform);  // 피벗 하위로 옮기기
-        go.transform.position = new Vector3(lastPosX, 0, 0);
+        go.transform.position = new Vector3(lastPosX, lastPosy, 0);
 
         MapPiece piece = go.GetComponent<MapPiece>();
         mapPieces.Add(piece);
-
-
-
-
-
-        //MapPiece randompivot = mapPieces[Random.Range(0, mapPieces.Count)];
-        //MapPiece mapRisfon = Instantiate(randompivot, movingPivot.transform.position, Quaternion.identity);
-        //mapRisfon.transform.SetParent(movingPivot);
-        //movingPivot = mapRisfon.transform;
-        //if (movingPivot.transform.position.x < mapDestroyPosition.position.x)
-        //{
-        //    mapPieces.Remove(mapPieces[0]);
-        //    Destroy(movingPivot.gameObject);
-        //    var newMapiece = Instantiate(mapPiecePrefeb,new Vector3(movingPivot.position.x,movingPivot.position.y ) , Quaternion.identity);
-
-        //    Instantiate(newMapiece);
-
-        //}
-
     }
 
     public void DestroyBackground()
     {
-        
-        for(int i = 0; i < mapPieces.Count;i++)
+
+        for (int i = 0; i < mapPieces.Count; i++)
         {
             MapPiece piece = mapPieces[i];
             if (piece.transform.position.x < mapDestroyPosition.position.x)
             {
- 
-                    // Destroy(map.gameObject);
-                    // 리스폰
-                    Rispone(piece);
+
+                // Destroy(map.gameObject);
+                // 리스폰
+                Rispone(piece);
             }
         }
 
     }
     public void MovePivot()
     {
+       
+
+        
         Vector2 pos = movingPivot.transform.position;
+        
         pos.x -= speed * Time.deltaTime;
         movingPivot.transform.position = pos;
+        
+    }
+
+    public void StartMap()
+    {
+        Debug.Log(Camera.main.transform.position);
+        Vector2 pos = BaceGround.transform.position;
+        pos.x -= speed * Time.deltaTime;
+        BaceGround.transform.position = pos;
+        Debug.Log(pos.x);
     }
 }
     

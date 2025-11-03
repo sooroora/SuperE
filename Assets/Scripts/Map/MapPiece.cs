@@ -13,4 +13,3 @@ public class MapPiece : MonoBehaviour
 
 
 }
-//��Ʈ�Ǻ��� ��ġ ���̴�.
