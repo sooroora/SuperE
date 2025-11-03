@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ad5682f4b5ecaf94897e3eb893061505, type: 3}
-  m_Name: Jump
+  m_Name: Crash
   m_EditorClassIdentifier: 
   tables:
-  - {fileID: 8300000, guid: c9efa289ed0248945b27520fe0ab865e, type: 3}
+  - {fileID: 8300000, guid: 0f8c28b29ea9ddd4f967015e573707bb, type: 3}
