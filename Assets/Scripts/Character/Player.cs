@@ -67,6 +67,7 @@ public class Player : MonoBehaviour
         {
             if (collision.GetComponent<Obstacle>() != null) //플레이어가 충돌시 벽 인지 체크
             {
+                Debug.Log("부딪침");
                 GameManager.Instance.Crash();
             }
         }
