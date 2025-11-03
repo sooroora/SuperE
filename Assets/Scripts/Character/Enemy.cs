@@ -23,7 +23,7 @@ public class Enemy : MonoBehaviour
     {
         while (Vector3.Distance(transform.position, targetPosition) > 0.1f)
         {
-            transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref speed, 0.5f);
+            transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref speed, 0.3f);
             yield return null;
         }
         GameManager.Instance.isCrash = false;
