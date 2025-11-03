@@ -25,6 +25,8 @@ public class GameManager : MonoBehaviour
     public bool isPlay;
     public bool isCrash;
 
+    public float RemainingDistance { get; private set; }
+
     private void Awake()
     {
         if (Instance == null)
@@ -44,7 +46,13 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         if (!isPlay)
+        {
+            RemainingDistance = 0;
+            mapLooper.SetSpeed(0);
             return;
+        }
+
+        RemainingDistance = player.transform.position.x - enemy.transform.position.x;
 
         time += Time.deltaTime;
         if (time > 30)
@@ -62,6 +70,10 @@ public class GameManager : MonoBehaviour
     public void Crash()
     {
         enemy.Approach();
+        if (RemainingDistance < 1)
+        {
+            pet.PetSkill();
+        }
     }
 
     public void PlayerSpeedUp()
