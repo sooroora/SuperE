@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO.MemoryMappedFiles;
 using UnityEngine;
 
 public class MapLooperTemp : MonoBehaviour
@@ -34,9 +35,29 @@ public class MapLooperTemp : MonoBehaviour
 
     void CheckDestroyMap()
     {
-        int removeCount = mapPieces.RemoveAll(map =>
+        List<MapPiece> toDestroy = mapPieces.FindAll(map =>
         {
             if (map.transform.position.x <= this.transform.position.x - 10)
+            {
+                return true;
+            }
+            return false;
+        });
+
+        toDestroy.ForEach(map =>
+            {
+                Item[] items = map.gameObject.GetComponentsInChildren<Item>();
+                foreach (Item item in items)
+                {
+                    item.transform.parent = null;
+                    item.gameObject.SetActive(false);
+                }
+            }
+        );
+
+        int destroyCount = mapPieces.RemoveAll(map =>
+        {
+            if (toDestroy.Contains(map))
             {
                 Destroy(map.gameObject);
                 return true;
@@ -44,10 +65,11 @@ public class MapLooperTemp : MonoBehaviour
             return false;
         });
 
-        if (removeCount > 0)
+        if (destroyCount > 0)
         {
             SpawnNewMapPiece(lastPivot);
         }
+        
     }
 
     public void SpawnNewMapPiece(Transform pieceTransform)
