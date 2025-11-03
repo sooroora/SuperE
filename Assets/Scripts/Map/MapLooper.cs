@@ -24,8 +24,6 @@ public class MapLooper : MonoBehaviour
     void Start()
     {
 
-
-
         Respawn(null);
         Respawn(null);
         Respawn(null);
@@ -84,13 +82,11 @@ public class MapLooper : MonoBehaviour
 
     public void DestroyBackground()
     {
-
         for (int i = 0; i < mapPieces.Count; i++)
         {
             MapPiece piece = mapPieces[i];
             if (piece.transform.position.x < mapDestroyPosition.position.x)
             {
-
                 // Destroy(map.gameObject);
                 // 리스폰
                 Respawn(piece);
@@ -100,9 +96,6 @@ public class MapLooper : MonoBehaviour
     }
     public void MovePivot()
     {
-
-
-
         Vector2 pos = movingPivot.transform.position;
 
         pos.x -= speed * Time.deltaTime;
@@ -112,11 +105,14 @@ public class MapLooper : MonoBehaviour
 
     public void StartMap()
     {
-        Debug.Log(Camera.main.transform.position);
         Vector2 pos = BaceGround.transform.position;
         pos.x -= speed * Time.deltaTime;
         BaceGround.transform.position = pos;
-        Debug.Log(pos.x);
+    }
+
+    public void SetSpeed(float _speed)
+    {
+        speed = _speed;
     }
 }
 
