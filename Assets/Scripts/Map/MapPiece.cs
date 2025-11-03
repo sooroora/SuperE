@@ -19,6 +19,9 @@ public class MapPiece : MonoBehaviour
 
     public void SpawnItems()
     {
+        if(spline == null)
+            return;
+        
         ItemSpawnManager.Instance.PlaceItems(spline);
     }
     
