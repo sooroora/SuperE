@@ -47,15 +47,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mapDestroyPosition: {fileID: 5015804288835677517, guid: 6c2f3c77c2cc6c24ea981669f9650abd, type: 3}
   mapPiecePrefab:
-  - {fileID: 4700650679825270380, guid: 259decdff9111e740837455558360d03, type: 3}
-  - {fileID: 4700650679825270380, guid: 6ac6b2b57864fc24eb186b313a0f989a, type: 3}
-  - {fileID: 4700650679825270380, guid: ce49cf08f917e144699bca332caee4be, type: 3}
+  - {fileID: 2123730541868870446, guid: 59883a5f1bb07524f9231f0c54b847fa, type: 3}
+  - {fileID: 2123730541868870446, guid: b8934707430c2df4cb489591955b7334, type: 3}
+  - {fileID: 2123730541868870446, guid: 7407df8d558ef9b45a3f36a5360fd72a, type: 3}
   speed: 5
   movingPivot: {fileID: 2777905036066183751}
   mapPieces:
-  - {fileID: 2861735449820562374, guid: 6ac6b2b57864fc24eb186b313a0f989a, type: 3}
-  - {fileID: 2861735449820562374, guid: ce49cf08f917e144699bca332caee4be, type: 3}
-  - {fileID: 2861735449820562374, guid: 259decdff9111e740837455558360d03, type: 3}
+  - {fileID: 8541399718259868846, guid: b8934707430c2df4cb489591955b7334, type: 3}
+  - {fileID: 8541399718259868846, guid: 7407df8d558ef9b45a3f36a5360fd72a, type: 3}
+  - {fileID: 8541399718259868846, guid: 59883a5f1bb07524f9231f0c54b847fa, type: 3}
   BaceGround: {fileID: 0}
   lastPosy: -4.9
 --- !u!1 &2777905036066183751

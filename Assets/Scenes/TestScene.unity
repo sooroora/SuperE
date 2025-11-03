@@ -134,6 +134,18 @@ PrefabInstance:
       propertyPath: BaceGround
       value: 
       objectReference: {fileID: 813322937}
+    - target: {fileID: -5517711260082077616, guid: aff39f9a277224d43bfaa73f7fd85896, type: 3}
+      propertyPath: mapPiecePrefab.Array.data[0]
+      value: 
+      objectReference: {fileID: 2123730541868870446, guid: b8934707430c2df4cb489591955b7334, type: 3}
+    - target: {fileID: -5517711260082077616, guid: aff39f9a277224d43bfaa73f7fd85896, type: 3}
+      propertyPath: mapPiecePrefab.Array.data[1]
+      value: 
+      objectReference: {fileID: 2123730541868870446, guid: 7407df8d558ef9b45a3f36a5360fd72a, type: 3}
+    - target: {fileID: -5517711260082077616, guid: aff39f9a277224d43bfaa73f7fd85896, type: 3}
+      propertyPath: mapPiecePrefab.Array.data[2]
+      value: 
+      objectReference: {fileID: 2123730541868870446, guid: 59883a5f1bb07524f9231f0c54b847fa, type: 3}
     - target: {fileID: 419220459456300131, guid: aff39f9a277224d43bfaa73f7fd85896, type: 3}
       propertyPath: m_Name
       value: NewMapLooper1
@@ -196,10 +208,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6073412217339554971, guid: 9c6f87dcfc2ff6040bdadd543176bd1f, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 36
-      objectReference: {fileID: 0}
     - target: {fileID: 6073412217339554971, guid: 9c6f87dcfc2ff6040bdadd543176bd1f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
