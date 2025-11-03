@@ -20,6 +20,9 @@ public class MapLooperTemp : MonoBehaviour
         SpawnNewMapPiece(this.transform);
         SpawnNewMapPiece(lastPivot);
         SpawnNewMapPiece(lastPivot);
+        SpawnNewMapPiece(lastPivot);
+        SpawnNewMapPiece(lastPivot);
+        
     }
 
     void Update()
@@ -37,7 +40,7 @@ public class MapLooperTemp : MonoBehaviour
     {
         List<MapPiece> toDestroy = mapPieces.FindAll(map =>
         {
-            if (map.transform.position.x <= this.transform.position.x - 10)
+            if (map.transform.position.x <= this.transform.position.x - 30)
             {
                 return true;
             }
