@@ -1,50 +1,94 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class MapLooper : MonoBehaviour
 {
-    [SerializeField] public GameObject mapMoving;
+    [SerializeField] private GameObject movingPivot; //Ïù¥Îèô Ïó≠Ìï†
+    [SerializeField] private Transform movingPosition;//
+    [SerializeField] private Transform mapDestroyPosition;
+    [SerializeField] private Transform LastPivot;
     
-    [SerializeField] float speed;
-    private bool IsBackground = false;
-    private GameObject count;
-    private int randomValue;
-    void Start()
-    {
-        
-    }
+    
+    [Header("option")]
+    [SerializeField] private float speed;
+    [SerializeField] List<MapPiece> mapPieces;
+    [SerializeField] private float width;
+    [SerializeField] private float spawnDistance;
+    
+    
 
-    // Update is called once per frame
-    void Update()
+
+    private bool hasSpawned = false;
+    private void Start()
     {
-        Background();
+        BackgroundInstatiate(this.transform);
     }
-    public void HasBackground()
+    
+    private void Update()
     {
-        
-        if (IsBackground == false)
+        Move();
+        SpawnNewMapPiece();
+        //BackgroundInstatiate(movingPosition);
+        CheckBackgroundDestroy();
+
+    }
+    public void BackgroundInstatiate(Transform nowTransform)
+    {
+        var randomBackground = mapPieces[Random.Range(0, mapPieces.Count)];
+
+        MapPiece clone = Instantiate(randomBackground, nowTransform.position, Quaternion.identity);
+        LastPivot = clone.lastPivot;
+         clone.transform.SetParent(movingPosition);
+        if (LastPivot.transform.position.x <= mapDestroyPosition.transform.position.x)
         {
-            
-            int count = mapMoving.transform.childCount;
-            
-            randomValue = Random.Range(0, count);
-            //Instantiate(mapMoving,)
+            //Destroy(clone.transform.SetParent(movingPosition));
         }
+       
+       
+
     }
 
-    public void Background()
+    void CheckBackgroundDestroy()
     {
-        Vector2 pos = mapMoving.transform.localPosition;
-        pos.x -= speed * Time.deltaTime;
-        mapMoving.transform.localPosition = pos;
-    }
-}
 
-//∏ movingPiot¿ª øÚ¡˜¿Œ¥Ÿ.
-//µ⁄ø° ¿÷¥¬ ø¿∫Í¡ß∆Æø° ∫Û ø¿∫Í¡ß∆ÆøÕ æ’ø° ¿÷¥¬ ∫Û ø¿∫Í¡ß∆Æ∏¶ ∏∏µÁ¥Ÿ.
-//µ⁄ø° ¿÷¥¬ ø¿∫Í¡ß∆Æ¥¬ √Êµπ¿Ã ¿œæÓ ≥™∏È æ’ø° ¿÷¥¬ ø¿∫Í¡ß∆Æø°º≠ movingPiotø° ¿÷¥¬ «œ¿ß ø¿∫Í¡ß∆Æ∏¶ ∫“∑Øø¬¥Ÿ
-//«œ¿ß ø¿∫Í¡ß∆Æ¥¬ movingPiot æ»ø° µÈæÓ ¿÷¥¬ mappiece¿« ∑£¥˝ ø¿∫Í¡ß∆Æ∏¶ ∫“∑Øø¬¥Ÿ. -> ¿Ã∞≈¥¬ random.range(mappiece.√÷º“∞™,mappiece.√÷¥Î∞™)
-//«œ¿ßø¿∫Í¡ß∆Æ √÷º“∞™∞˙ √÷¥Î∞™¿ª ∏∏µÁ ¿Ã¿Ø¥¬ 
-//¿Ã¿¸∞˙ ∂»∞∞¿Ã movingPiotø¿∫Í¡ß∆Æ∏¶ µ⁄∑Œ ∞°∞‘ ∏∏µÁ¥Ÿ
-//π›∫π
+        // clone Ìïú Ïï†Îì§ÏùÑ mapDestroyPositionÏù¥ ÎÑòÏúºÎ©¥ Destroy Ìï† Ïàò ÏûàÎèÑÎ°ù Íµ¨ÌòÑ ÌïÑÏöî
+        if (mapDestroyPosition.position.x > movingPosition.position.x)
+        {
+
+            Destroy(LastPivot.transform);
+        }
+
+        //void movingPosition()
+        // if (movingPosition.transform.position.x <= mapDestroyPosition.transform.position.x)
+        //{
+        //    Destroy(clone);
+        //}
+    }
+
+    public void Move()
+    {
+        Vector3 pos = movingPivot.transform.position;
+        pos.x -= speed * Time.deltaTime;
+        movingPivot.transform.position = pos;
+        
+    }
+
+    public void SpawnNewMapPiece()
+    {
+        //Debug.Log("Last"+ LastPivot.transform.position.x);
+        //Debug.Log("destroy" + mapDestroyPosition.transform.position.x);
+        if (LastPivot.transform.position.x <= mapDestroyPosition.transform.position.x)
+        {
+            BackgroundInstatiate(LastPivot.transform);
+            
+        }
+
+    }
+
+}  
+
+
+

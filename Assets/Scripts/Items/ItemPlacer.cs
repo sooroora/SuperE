@@ -17,12 +17,12 @@ public class ItemPlacer : MonoBehaviour
 
     public void PlaceItems()
     {
-        List<Spline> splines    = SplineContainer.Splines.ToList();
+        List<Spline> splines = SplineContainer.Splines.ToList();
 
         for (int k = 0; k < splines.Count; k++)
         {
             int spawnCount = (int)(splines[k].GetLength() / itemSpace);
-            
+
             for (int i = 0; i <= spawnCount; i++)
             {
                 float t = i / (float)(spawnCount - 1);
@@ -32,12 +32,12 @@ public class ItemPlacer : MonoBehaviour
 
                 for (int j = 0; j < verticalCount; j++)
                 {
-                    Vector3 verticalPos = worldPos + Vector3.up * (verticalSpace * (j + 1 / 2f) * (j % 2 == 0 ? -1 : 1));
+                    Vector3 verticalPos =
+                        worldPos + Vector3.up * (verticalSpace * Mathf.Ceil(j / 2f) * (j % 2 == 0 ? -1 : 1));
                     Instantiate(itemPrefab, verticalPos, Quaternion.identity);
                 }
             }
         }
-        
     }
 
     public void RemoveAllItems()

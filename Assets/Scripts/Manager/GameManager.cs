@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -6,17 +7,48 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    [SerializeField] private Player player;
-    [SerializeField] private Enemy enemy;
+    public Player player;
+    public Enemy enemy;
     [SerializeField] private MapLooper mapLooper;
-    [SerializeField] private ItemSpawnManager spawnManager;
     [SerializeField] private CharacterSpawner characterSpawner;
+    [SerializeField] private EnemySpawner enemySpawner;
 
     public int currentScore = 0;
     public int bestScore = 0;
 
+    private float time = 0;
+
     public bool isPlay;
     public bool isCrash;
+
+    public event Action<Player> OnPlayerSpawned;
+
+    private void Awake()
+    {
+        if (Instance == null)
+            Instance = this;
+    }
+
+    private void Start()
+    {
+        bestScore = PlayerPrefs.GetInt("BestScore", bestScore);
+        player = characterSpawner.SpawnCharacter();
+        OnPlayerSpawned?.Invoke(player);
+        enemy = enemySpawner.SpawnEnemy();
+    }
+
+    private void Update()
+    {
+        if (!isPlay)
+            return;
+        SpeedUp();
+    }
+
+    public void GameStart()
+    {
+        currentScore = 0;
+        isPlay = true;
+    }
 
     public void Crash()
     {
@@ -24,42 +56,13 @@ public class GameManager : MonoBehaviour
         enemy.Move();
     }
 
-
-    private void Awake()
-    {
-        if (Instance != null)
-        {
-            Destroy(gameObject);
-            return;
-        }
-
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
-    }
-
-    private void Start()
-    {
-        bestScore = PlayerPrefs.GetInt("BestScore", bestScore);
-        spawnManager.PlaceItems();
-        characterSpawner.SpawnCharacter();
-    }
-
-    private void Update()
-    {
-        if (!isPlay)
-            return;
-    }
-
-    public void GameStart()
-    {
-        currentScore = 0;
-        isPlay = true;
-        spawnManager.PlaceItems();
-    }
-
     public void SpeedUp()
     {
-        //mapLooper.
+        time += Time.deltaTime;
+        if (time > 30)
+        {
+            //mapLooper.
+        }
     }
 
     public void AddScore(int value)

@@ -94,13 +94,13 @@ GameObject:
   m_Component:
   - component: {fileID: 885884773731781411}
   - component: {fileID: 2419570733869551538}
-  - component: {fileID: 250101291800868435}
+  - component: {fileID: 4035776648440626057}
   - component: {fileID: 4533982946053647687}
   - component: {fileID: 7117137412003831393}
   - component: {fileID: 9016387718786855149}
   m_Layer: 0
   m_Name: Player_jaewoo
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -173,7 +173,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &250101291800868435
+--- !u!114 &4035776648440626057
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -182,10 +182,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6691761871275147355}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e02f8135449e17740b44058a356aaf0f, type: 3}
+  m_Script: {fileID: 11500000, guid: 87d25a45505205a4ab1cfad3fab94a99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flapForce: 4
+  flapForce: 30
   isFlap: 0
 --- !u!50 &4533982946053647687
 Rigidbody2D:
@@ -202,7 +202,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 10
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -212,7 +212,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!70 &7117137412003831393
 CapsuleCollider2D:
