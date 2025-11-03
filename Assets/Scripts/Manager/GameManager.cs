@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
     {
         if (!isPlay)
             return;
-        SpeedUp();
+        MapSpeedUp();
     }
 
     public void GameStart()
@@ -53,15 +53,20 @@ public class GameManager : MonoBehaviour
     public void Crash()
     {
         isCrash = true;
-        enemy.Move();
+        enemy.Approach();
     }
 
-    public void SpeedUp()
+    public void PlayerSpeedUp()
+    {
+        enemy.Retreat();
+    }
+
+    public void MapSpeedUp()
     {
         time += Time.deltaTime;
         if (time > 30)
         {
-            //mapLooper.
+            mapLooper.SetSpeed(5);
         }
     }
 
