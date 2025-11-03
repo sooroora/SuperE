@@ -28,15 +28,11 @@ public class Enemy : MonoBehaviour
         }
         GameManager.Instance.isCrash = false;
     }
-    
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void Update()
     {
-        if (collision.gameObject.GetComponent<Player>() != null)
+        if (GameManager.Instance.RemainingDistance > 0.1f)
         {
             GameManager.Instance.GameOver();
         }
-
     }
-
-
 }
