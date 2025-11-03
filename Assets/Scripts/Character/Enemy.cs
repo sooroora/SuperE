@@ -24,15 +24,11 @@ public class Enemy : MonoBehaviour
         while (Vector3.Distance(transform.position, targetPosition) > 0.1f)
         {
             transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref speed, 0.3f);
+            if (GameManager.Instance.RemainingDistance < 0.1f)
+            {
+                GameManager.Instance.GameOver();
+            }
             yield return null;
-        }
-        GameManager.Instance.isCrash = false;
-    }
-    public void Update()
-    {
-        if (GameManager.Instance.RemainingDistance < 0.1f)
-        {
-            GameManager.Instance.GameOver();
         }
     }
 }
