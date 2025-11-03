@@ -9,14 +9,16 @@ public class GameManager : MonoBehaviour
 
     public Player player;
     public Enemy enemy;
+
     [SerializeField] private MapLooper mapLooper;
     [SerializeField] private CharacterSpawner characterSpawner;
     [SerializeField] private EnemySpawner enemySpawner;
 
-    public int currentScore = 0;
-    public int bestScore = 0;
+    private int currentScore = 0;
+    private int bestScore = 0;
 
     private float time = 0;
+    [SerializeField] private float levelSpeedUp = 6;
 
     public bool isPlay;
     public bool isCrash;
@@ -35,13 +37,20 @@ public class GameManager : MonoBehaviour
         player = characterSpawner.SpawnCharacter();
         OnPlayerSpawned?.Invoke(player);
         enemy = enemySpawner.SpawnEnemy();
+
+        GameStart();
     }
 
     private void Update()
     {
         if (!isPlay)
             return;
-        SpeedUp();
+
+        time += Time.deltaTime;
+        if (time > 30)
+        {
+            MapSpeedUp();
+        }
     }
 
     public void GameStart()
@@ -52,17 +61,17 @@ public class GameManager : MonoBehaviour
 
     public void Crash()
     {
-        isCrash = true;
-        enemy.Move();
+        enemy.Approach();
     }
 
-    public void SpeedUp()
+    public void PlayerSpeedUp()
     {
-        time += Time.deltaTime;
-        if (time > 30)
-        {
-            //mapLooper.
-        }
+        enemy.Retreat();
+    }
+
+    public void MapSpeedUp()
+    {
+        mapLooper.SetSpeed(levelSpeedUp);
     }
 
     public void AddScore(int value)

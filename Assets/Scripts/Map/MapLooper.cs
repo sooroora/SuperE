@@ -6,89 +6,113 @@ using UnityEngine.UIElements;
 
 public class MapLooper : MonoBehaviour
 {
-    [SerializeField] private GameObject movingPivot; //이동 역할
-    [SerializeField] private Transform movingPosition;//
-    [SerializeField] private Transform mapDestroyPosition;
-    [SerializeField] private Transform LastPivot;
-    
-    
+    [SerializeField] private Transform mapDestroyPosition; //포지션 x값이 같으면 삭제
+
     [Header("option")]
+
+    [SerializeField] private List<GameObject> mapPiecePrefab;      // 생성할 맵의 원본 -> 원본 들
+
     [SerializeField] private float speed;
-    [SerializeField] List<MapPiece> mapPieces;
-    [SerializeField] private float width;
-    [SerializeField] private float spawnDistance;
-    
-    
+    [SerializeField] private GameObject movingPivot;    // 이동의 주체
+
+    [SerializeField] List<MapPiece> mapPieces;  // 생성된 맵들
+    [SerializeField] private GameObject BaceGround;
+    private int probability;
+    [SerializeField] private float lastPosy;
 
 
-    private bool hasSpawned = false;
-    private void Start()
+    void Start()
     {
-        BackgroundInstatiate(this.transform);
+
+        Respawn(null);
+        Respawn(null);
+        Respawn(null);
+        Respawn(null);
+        Respawn(null);
+        Respawn(null);
+        Respawn(null);
     }
-    
-    private void Update()
+
+    // Update is called once per frame
+    void Update()
     {
-        Move();
-        SpawnNewMapPiece();
-        //BackgroundInstatiate(movingPosition);
-        CheckBackgroundDestroy();
+        StartMap();
+        MovePivot();
+        DestroyBackground();
+
 
     }
-    public void BackgroundInstatiate(Transform nowTransform)
+    public void Respawn(MapPiece mapPiece)
     {
-        var randomBackground = mapPieces[Random.Range(0, mapPieces.Count)];
+        // 생성할 프리팹을 고른다.
+        // 마지막 생성된 맵 뒤에 새로운 맵을 생성한다.
+        //  마지막 맵 찾기
+        //  마지막 맵 끝 위치 찾기
+        //  새로운 맵 생성
+        //  새로운 맵 위치 조정
 
-        MapPiece clone = Instantiate(randomBackground, nowTransform.position, Quaternion.identity);
-        LastPivot = clone.lastPivot;
-         clone.transform.SetParent(movingPosition);
-        if (LastPivot.transform.position.x <= mapDestroyPosition.transform.position.x)
+        // 기존의 맵 삭제
+        if (mapPiece != null)
         {
-            //Destroy(clone.transform.SetParent(movingPosition));
-        }
-       
-       
-
-    }
-
-    void CheckBackgroundDestroy()
-    {
-
-        // clone 한 애들을 mapDestroyPosition이 넘으면 Destroy 할 수 있도록 구현 필요
-        if (mapDestroyPosition.position.x > movingPosition.position.x)
-        {
-
-            Destroy(LastPivot.transform);
+            mapPieces.Remove(mapPiece);
+            Destroy(mapPiece.gameObject);
         }
 
-        //void movingPosition()
-        // if (movingPosition.transform.position.x <= mapDestroyPosition.transform.position.x)
-        //{
-        //    Destroy(clone);
-        //}
+
+        // 새로운 맵 생성
+
+        GameObject prefab = mapPiecePrefab[Random.Range(0, mapPiecePrefab.Count)];         //프레펩이름의 게임오브젝트 생성
+        GameObject go = Instantiate(prefab);        // 클론 생성
+
+        // 마지막 맵
+        float lastPosX = 0; //x의 위치 값 변경시 같이 이동이 됨
+
+        if (mapPieces.Count >= 1)   // 1개라도 맵이 생성 되어 있으면
+        {
+            MapPiece lastPiece = mapPieces[mapPieces.Count - 1]; //mapPieces의 리스트수를?? -1을 해라 앞에서 리스트가 삭제되었기 때문에
+            lastPosX = lastPiece.GetLastPivotX();          // 다음 생성 위치
+        }
+
+        go.transform.SetParent(movingPivot.transform);  // 피벗 하위로 옮기기
+        go.transform.position = new Vector3(lastPosX, lastPosy, 0);
+
+        MapPiece piece = go.GetComponent<MapPiece>();
+        mapPieces.Add(piece);
     }
 
-    public void Move()
+    public void DestroyBackground()
     {
-        Vector3 pos = movingPivot.transform.position;
+        for (int i = 0; i < mapPieces.Count; i++)
+        {
+            MapPiece piece = mapPieces[i];
+            if (piece.transform.position.x < mapDestroyPosition.position.x)
+            {
+                // Destroy(map.gameObject);
+                // 리스폰
+                Respawn(piece);
+            }
+        }
+
+    }
+    public void MovePivot()
+    {
+        Vector2 pos = movingPivot.transform.position;
+
         pos.x -= speed * Time.deltaTime;
         movingPivot.transform.position = pos;
-        
+
     }
 
-    public void SpawnNewMapPiece()
+    public void StartMap()
     {
-        //Debug.Log("Last"+ LastPivot.transform.position.x);
-        //Debug.Log("destroy" + mapDestroyPosition.transform.position.x);
-        if (LastPivot.transform.position.x <= mapDestroyPosition.transform.position.x)
-        {
-            BackgroundInstatiate(LastPivot.transform);
-            
-        }
-
+        Vector2 pos = BaceGround.transform.position;
+        pos.x -= speed * Time.deltaTime;
+        BaceGround.transform.position = pos;
     }
 
-}  
-
-
+    public void SetSpeed(float _speed)
+    {
+        speed = _speed;
+    }
+}
 
