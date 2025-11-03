@@ -63,14 +63,17 @@ public class Player : MonoBehaviour
     }
     protected virtual void OnTriggerEnter2D(Collider2D collision) 
     {
-        if (collision.GetComponent<Obstacle>() != null) //플레이어가 충돌시 벽 인지 체크
+        if (!animator.GetBool("Hited"))
         {
-            GameManager.Instance.Crash();
+            if (collision.GetComponent<Obstacle>() != null) //플레이어가 충돌시 벽 인지 체크
+            {
+                GameManager.Instance.Crash();
+            }
         }
-
-        else //아이템 사용
+        //else if()//아이템 사용
+        else
         {
-
+            return;
         }
     }
     protected virtual void OnCollisionEnter2D(Collision2D collision) 
@@ -81,5 +84,9 @@ public class Player : MonoBehaviour
             animator.SetBool("IsJump", false); // 점프 애니메이터 종료
             jumpCount = 2; // 점프를 했다면 점프횟수를 돌려주기 위한 변수
         }
+    }
+    public void StarpedAnimataion()
+    {
+        animator.SetBool("Hited", false);
     }
 }
