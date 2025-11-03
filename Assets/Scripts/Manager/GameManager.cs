@@ -9,10 +9,12 @@ public class GameManager : MonoBehaviour
 
     public Player player;
     public Enemy enemy;
+    public BasePet pet;
 
     [SerializeField] private MapLooper mapLooper;
     [SerializeField] private CharacterSpawner characterSpawner;
     [SerializeField] private EnemySpawner enemySpawner;
+    [SerializeField] private PetSpawner petSpawner;
 
     private int currentScore = 0;
     private int bestScore = 0;
@@ -22,8 +24,6 @@ public class GameManager : MonoBehaviour
 
     public bool isPlay;
     public bool isCrash;
-
-    public event Action<Player> OnPlayerSpawned;
 
     private void Awake()
     {
@@ -35,8 +35,8 @@ public class GameManager : MonoBehaviour
     {
         bestScore = PlayerPrefs.GetInt("BestScore", bestScore);
         player = characterSpawner.SpawnCharacter();
-        OnPlayerSpawned?.Invoke(player);
         enemy = enemySpawner.SpawnEnemy();
+        pet = petSpawner.SpawnPet(player);
 
         GameStart();
     }
