@@ -1,15 +1,26 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
+using UnityEngine.Splines;
 
 public class MapPiece : MonoBehaviour
 {
     public Transform lastPivot;
+    [SerializeField] SplineContainer spline;
+    
+    private void Start()
+    {
+        SpawnItems();
+    }
 
     public float GetLastPivotX()
     {
         return lastPivot.position.x;
     }
 
-
+    public void SpawnItems()
+    {
+        ItemSpawnManager.Instance.PlaceItems(spline);
+    }
+    
 }
+
