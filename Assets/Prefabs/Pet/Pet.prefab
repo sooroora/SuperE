@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: {x: -0.7, y: 2.3, z: 0}
+  animator: {fileID: 4560090596073801269}
 --- !u!1 &5458654292232055921
 GameObject:
   m_ObjectHideFlags: 0
