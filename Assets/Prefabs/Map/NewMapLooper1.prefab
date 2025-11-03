@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1919246795215813906}
-  - component: {fileID: -5517711260082077616}
+  - component: {fileID: 4258024003822503036}
   m_Layer: 0
   m_Name: NewMapLooper1
   m_TagString: Untagged
@@ -33,7 +33,7 @@ Transform:
   - {fileID: 41789799876069175}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-5517711260082077616
+--- !u!114 &4258024003822503036
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -42,21 +42,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 419220459456300131}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7bf09afd1992dc48adcb3383d539768, type: 3}
+  m_Script: {fileID: 11500000, guid: e5f14a246319aa94b8a46cf08148c214, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   mapDestroyPosition: {fileID: 5015804288835677517, guid: 6c2f3c77c2cc6c24ea981669f9650abd, type: 3}
   mapPiecePrefab:
   - {fileID: 2123730541868870446, guid: 59883a5f1bb07524f9231f0c54b847fa, type: 3}
   - {fileID: 2123730541868870446, guid: b8934707430c2df4cb489591955b7334, type: 3}
-  - {fileID: 2123730541868870446, guid: 7407df8d558ef9b45a3f36a5360fd72a, type: 3}
+  - {fileID: 2123730541868870446, guid: 1cec2907210be1c4485d1f6b448f66eb, type: 3}
+  - {fileID: 2123730541868870446, guid: 9f341dc332cb07840972d1bc00ae785d, type: 3}
+  - {fileID: 2123730541868870446, guid: e585b4283f2aa9748b5aafd6c9cda9cd, type: 3}
+  - {fileID: 2123730541868870446, guid: 0ab6f74e8ac90254f963a5b1d39a951e, type: 3}
   speed: 5
   movingPivot: {fileID: 2777905036066183751}
   mapPieces:
-  - {fileID: 8541399718259868846, guid: b8934707430c2df4cb489591955b7334, type: 3}
-  - {fileID: 8541399718259868846, guid: 7407df8d558ef9b45a3f36a5360fd72a, type: 3}
   - {fileID: 8541399718259868846, guid: 59883a5f1bb07524f9231f0c54b847fa, type: 3}
-  BaceGround: {fileID: 0}
+  - {fileID: 8541399718259868846, guid: b8934707430c2df4cb489591955b7334, type: 3}
+  - {fileID: 8541399718259868846, guid: 1cec2907210be1c4485d1f6b448f66eb, type: 3}
+  - {fileID: 8541399718259868846, guid: 9f341dc332cb07840972d1bc00ae785d, type: 3}
+  - {fileID: 8541399718259868846, guid: e585b4283f2aa9748b5aafd6c9cda9cd, type: 3}
+  - {fileID: 8541399718259868846, guid: 0ab6f74e8ac90254f963a5b1d39a951e, type: 3}
+  BaceGround: {fileID: 8922459624677302228, guid: 9c6f87dcfc2ff6040bdadd543176bd1f, type: 3}
   lastPosy: -4.9
 --- !u!1 &2777905036066183751
 GameObject:
