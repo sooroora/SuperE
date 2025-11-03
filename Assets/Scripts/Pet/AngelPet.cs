@@ -9,14 +9,11 @@ public class AngelPet : BasePet
     [SerializeField] Animator animator;
     public override void PetSkill()
     {
-        if (GameManager.Instance.RemainingDistance < 1)
+        if (skillCount > 0)
         {
-            if (skillCount > 0)
-            {
-                animator.SetTrigger("IsSkill");
-                GameManager.Instance.PlayerSpeedUp();
-                skillCount--;
-            }
+            animator.SetTrigger("IsSkill");
+            GameManager.Instance.PlayerSpeedUp();
+            skillCount--;
         }
     }
 }
