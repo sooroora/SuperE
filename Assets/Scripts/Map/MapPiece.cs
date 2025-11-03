@@ -1,21 +1,15 @@
-using System.Linq;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Splines;
 
 public class MapPiece : MonoBehaviour
 {
     public Transform lastPivot;
-    [SerializeField] SplineContainer spline;
 
-    private void Start()
+    public float GetLastPivotX()
     {
-        // start 보다 MapLooper 에서 MapPiece 소환 시 해줬으면 좋겠다!
-        SpawnItems();
+        return lastPivot.position.x;
     }
 
-    public void SpawnItems()
-    {
-        ItemSpawnManager.Instance.PlaceItems(spline);
-    }
 
 }
