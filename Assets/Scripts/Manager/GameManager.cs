@@ -8,9 +8,10 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     public Player player;
-    [SerializeField] private Enemy enemy;
+    public Enemy enemy;
     [SerializeField] private MapLooper mapLooper;
     [SerializeField] private CharacterSpawner characterSpawner;
+    [SerializeField] private EnemySpawner enemySpawner;
 
     public int currentScore = 0;
     public int bestScore = 0;
@@ -33,6 +34,7 @@ public class GameManager : MonoBehaviour
         bestScore = PlayerPrefs.GetInt("BestScore", bestScore);
         player = characterSpawner.SpawnCharacter();
         OnPlayerSpawned?.Invoke(player);
+        enemy = enemySpawner.SpawnEnemy();
     }
 
     private void Update()
