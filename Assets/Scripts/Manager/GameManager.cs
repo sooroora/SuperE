@@ -70,6 +70,10 @@ public class GameManager : MonoBehaviour
     public void Crash()
     {
         enemy.Approach();
+        if (RemainingDistance < 1)
+        {
+            pet.PetSkill();
+        }
     }
 
     public void PlayerSpeedUp()

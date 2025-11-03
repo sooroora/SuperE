@@ -19,11 +19,13 @@ public class Sura : Player
                 }
                 else
                 {
+                    animator.SetBool("Hited", true);
                     GameManager.Instance.Crash();
                 }
 
             }
         }
+        else return;
             
     }
 }

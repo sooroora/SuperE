@@ -67,7 +67,9 @@ public class Player : MonoBehaviour
         {
             if (collision.GetComponent<Obstacle>() != null) //플레이어가 충돌시 벽 인지 체크
             {
+                animator.SetBool("Hited", true);
                 GameManager.Instance.Crash();
+                animator.SetBool("Hited", true);
             }
         }
         //else if()//아이템 사용
@@ -87,6 +89,6 @@ public class Player : MonoBehaviour
     }
     public void StarpedAnimataion()
     {
-        animator.SetBool("Hited", false);
+        animator.SetBool("Hited",false);
     }
 }
