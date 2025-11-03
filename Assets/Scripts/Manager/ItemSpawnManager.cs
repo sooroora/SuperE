@@ -1,26 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEditorInternal.Profiling.Memory.Experimental;
 using UnityEngine;
 using UnityEngine.Splines;
+using static UnityEditor.Progress;
 
 public class ItemSpawnManager : MonoBehaviour
 {
     public static ItemSpawnManager Instance;
 
-    public GameObject coinPrefab;
-    public GameObject speedItemPrefab;
-    public SplineContainer SplineContainer;
+    [SerializeField] private GameObject coinPrefab;
+    [SerializeField] private List<GameObject> specialItemPrefab;
+    [SerializeField] private SplineContainer SplineContainer;
 
-    public int poolSize = 100;
+    [SerializeField] private int coinPoolSize = 100;
+    [SerializeField] private int specialPoolSize = 1;
+    [SerializeField] private int specialItemProbability = 10;
 
     [Header("Place Option")]
-    public float itemSpace = 1.0f;
-    public int verticalCount = 1;
-    public float verticalSpace = 0.5f;
+    [SerializeField] private float itemSpace = 1.0f;
+    [SerializeField] private int verticalCount = 1;
+    [SerializeField] private float verticalSpace = 0.5f;
 
 
-    private List<GameObject> itemPool = new List<GameObject>();
+    private List<GameObject> coinItemPool = new List<GameObject>();
+    private List<GameObject> specialItemPool = new List<GameObject>();
 
     private void Awake()
     {
@@ -31,41 +36,66 @@ public class ItemSpawnManager : MonoBehaviour
 
     private void InitializePool()
     {
-        for (int i = 0; i < poolSize; i++)
+        for (int i = 0; i < coinPoolSize; i++)
         {
             GameObject item = Instantiate(coinPrefab);
             item.SetActive(false);
-            itemPool.Add(item);
+            coinItemPool.Add(item);
         }
-        //itemPool.Add(speedItemPrefab);
+
+        for (int i = 0; i < specialPoolSize; i++)
+        {
+            foreach (var specialItem in specialItemPrefab)
+            {
+                GameObject item = Instantiate(specialItem);
+                item.SetActive(false);
+                specialItemPool.Add(item);
+            }
+        }
     }
 
-    private GameObject GetPooledObject()
+    private GameObject GetCoinPooledObject()
     {
-        //int randomIndex = Random.Range(0, itemPool.Count);
-        for (int i = 0; i < itemPool.Count; i++)
+        for (int i = 0; i < coinItemPool.Count; i++)
         {
-            if (!itemPool[i].activeInHierarchy)
+            if (!coinItemPool[i].activeInHierarchy)
             {
-                itemPool[i].SetActive(true);
-                return itemPool[i];
+                coinItemPool[i].SetActive(true);
+                return coinItemPool[i];
             }
-            // else
-            // {
-            //     randomIndex = (randomIndex + 1) % itemPool.Count;
-            // }
         }
 
         GameObject newItem = Instantiate(coinPrefab);
         newItem.SetActive(true);
-        itemPool.Add(newItem);
+        coinItemPool.Add(newItem);
         return newItem;
+    }
+
+    private GameObject GetSpecialPooledObject()
+    {
+        for (int i = 0; i < specialItemPool.Count; i++)
+        {
+            if (!specialItemPool[i].activeInHierarchy)
+            {
+                specialItemPool[i].SetActive(true);
+                return specialItemPool[i];
+            }
+        }
+
+        int rand = Random.Range(0, specialItemPrefab.Count);
+
+        GameObject newItem = Instantiate(specialItemPrefab[rand]);
+        newItem.SetActive(true);
+        specialItemPool.Add(newItem);
+        return newItem;
+
     }
 
     public void PlaceItems(SplineContainer mapSpline)
     {
         List<Spline> splines = mapSpline.Splines.ToList();
-            //SplineContainer.Splines.ToList();
+
+        bool isSpecialSpawned = false;
 
         for (int k = 0; k < splines.Count; k++)
         {
@@ -82,9 +112,21 @@ public class ItemSpawnManager : MonoBehaviour
                 {
                     Vector3 verticalPos = worldPos + Vector3.up * (verticalSpace * Mathf.Ceil(j / 2f) * (j % 2 == 0 ? -1 : 1));
 
-                    GameObject spawnedItem = GetPooledObject();
-                    spawnedItem.transform.position = verticalPos;
-                    spawnedItem.transform.SetParent(mapSpline.transform);
+                    int rand = Random.Range(0, 100);
+
+                    if (!isSpecialSpawned && rand < specialItemProbability)
+                    {
+                        isSpecialSpawned = false;
+                        GameObject spawnedItem = GetSpecialPooledObject();
+                        spawnedItem.transform.position = verticalPos;
+                        spawnedItem.transform.SetParent(mapSpline.transform);
+                    }
+                    else
+                    {
+                        GameObject spawnedItem = GetCoinPooledObject();
+                        spawnedItem.transform.position = verticalPos;
+                        spawnedItem.transform.SetParent(mapSpline.transform);
+                    }
                 }
             }
         }

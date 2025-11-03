@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -6,7 +7,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    [SerializeField] private Player player;
+    public Player player;
     [SerializeField] private Enemy enemy;
     [SerializeField] private MapLooper mapLooper;
     [SerializeField] private CharacterSpawner characterSpawner;
@@ -19,16 +20,19 @@ public class GameManager : MonoBehaviour
     public bool isPlay;
     public bool isCrash;
 
-    public void Crash()
+    public event Action<Player> OnPlayerSpawned;
+
+    private void Awake()
     {
-        isCrash = true;
-        enemy.Move();
+        if (Instance == null)
+            Instance = this;
     }
 
     private void Start()
     {
         bestScore = PlayerPrefs.GetInt("BestScore", bestScore);
-        characterSpawner.SpawnCharacter();
+        player = characterSpawner.SpawnCharacter();
+        OnPlayerSpawned?.Invoke(player);
     }
 
     private void Update()
@@ -42,6 +46,12 @@ public class GameManager : MonoBehaviour
     {
         currentScore = 0;
         isPlay = true;
+    }
+
+    public void Crash()
+    {
+        isCrash = true;
+        enemy.Move();
     }
 
     public void SpeedUp()
