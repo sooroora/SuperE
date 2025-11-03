@@ -268,6 +268,18 @@ PrefabInstance:
       propertyPath: sqawnPoint.y
       value: -3.8
       objectReference: {fileID: 0}
+    - target: {fileID: 2121658638777180288, guid: fc9434a2cf01e884481f9a7a6d530526, type: 3}
+      propertyPath: enemyPrefabs.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2121658638777180288, guid: fc9434a2cf01e884481f9a7a6d530526, type: 3}
+      propertyPath: enemyPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 426115440051922498, guid: 87ab479db03f7504682246e8b548e5a4, type: 3}
+    - target: {fileID: 2121658638777180288, guid: fc9434a2cf01e884481f9a7a6d530526, type: 3}
+      propertyPath: enemyPrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 426115440051922498, guid: 87ab479db03f7504682246e8b548e5a4, type: 3}
     - target: {fileID: 4452396371032937743, guid: fc9434a2cf01e884481f9a7a6d530526, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1262,6 +1274,14 @@ PrefabInstance:
       propertyPath: mapPieces.Array.data[1]
       value: 
       objectReference: {fileID: 1231476978}
+    - target: {fileID: 4258024003822503036, guid: aff39f9a277224d43bfaa73f7fd85896, type: 3}
+      propertyPath: mapPiecePrefab.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4258024003822503036, guid: aff39f9a277224d43bfaa73f7fd85896, type: 3}
+      propertyPath: mapPiecePrefab.Array.data[0]
+      value: 
+      objectReference: {fileID: 2123730541868870446, guid: 0ab6f74e8ac90254f963a5b1d39a951e, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
