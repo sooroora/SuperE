@@ -23,20 +23,12 @@ public class Enemy : MonoBehaviour
     {
         while (Vector3.Distance(transform.position, targetPosition) > 0.1f)
         {
-            transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref speed, 0.5f);
+            transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref speed, 0.3f);
+            if (GameManager.Instance.RemainingDistance < 0.1f)
+            {
+                GameManager.Instance.GameOver();
+            }
             yield return null;
         }
-        GameManager.Instance.isCrash = false;
     }
-    
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.GetComponent<Player>() != null)
-        {
-            GameManager.Instance.GameOver();
-        }
-
-    }
-
-
 }
