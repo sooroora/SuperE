@@ -13,8 +13,9 @@ public enum ESceneTransferData
 
 public enum ESceneName
 {
-    Title,
-    Game,
+    TitleScene,
+    GameScene,
+    BootstrapScene
 }
 
 public enum ECharacterName

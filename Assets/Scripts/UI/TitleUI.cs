@@ -16,8 +16,7 @@ public class TitleUI : UIBase
 
     private void OnStartButtonClicked()
     {
-        PlayerPrefsManager.SetStringValue(ESceneTransferData.SceneName, nameof(ESceneName.Title));
-        SceneManager.LoadScene("LoadingScene");
+        SceneTransferManager.LoadScene(ESceneName.GameScene);
     }
 
     private void OnExitButtonClicked()

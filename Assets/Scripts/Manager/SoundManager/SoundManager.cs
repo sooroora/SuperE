@@ -68,6 +68,10 @@ public class SoundManager : MonoBehaviour
             instance.ReadSoundClips();
             SetSavedVolume();
         }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     void ReadSoundClips()
