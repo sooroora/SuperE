@@ -52,7 +52,7 @@ public class NewMapLoop : MonoBehaviour
         //  새로운 맵 위치 조정
 
         // 기존의 맵 삭제
-        if (mapPiece != null)
+        if (mapPiece != null) //mapPiece가 널일 경우에
         {
             mapPieces.Remove(mapPiece);
             Destroy(mapPiece.gameObject);
@@ -119,3 +119,9 @@ public class NewMapLoop : MonoBehaviour
 }
     
         
+//구조
+
+//prefab을 리스트로 만들어 거기 리스트를 랜덤으로 불러 올 수 있게 한다.
+//그걸 프레펩이라는 제목으로 오브젝트를 만들어서 복제해서 실행
+//새로운 오브젝트를 만들어 오브젝트 포지션을 넘으면 리스트 삭제 그리고 오브젝트 삭제
+//그리고 prefab이라는 변수를 다시 복제해서 생성
