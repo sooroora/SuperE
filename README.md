@@ -16,11 +16,9 @@
 ![타이틀](https://github.com/sooroora/SuperE/blob/main/Screenshots/%ED%83%80%EC%9D%B4%ED%8B%80.png)
 ---
 ## 팀소개
-+ 곽호빈
-+ 이요한
-+ 전수라
-+ 정재우
-+ 한승호
+
+<img width="810" height="314" alt="image (1)" src="https://github.com/user-attachments/assets/aca8caef-c208-4881-a448-09fb5b60a674" />
+
 ---
 ## 💜 주요기능
 + 러닝 플레이 시스템
