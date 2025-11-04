@@ -8,17 +8,15 @@ public class Yohan : Player
 {
     protected Vector3 Speed = Vector3.zero;
     [SerializeField] LayerMask item;
-    protected Transform Player;
     private void Awake()
     {
-        Player = GetComponent<Transform>();
     }
     private void FixedUpdate()
     {
-        Collider2D[] hits = Physics2D.OverlapCircleAll(Player.position, 4f, item);
+        Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, 4f, item);
         foreach (Collider2D hit in hits)
         {
-            hit.transform.position = Vector3.SmoothDamp(hit.transform.position, Player.position + Vector3.right, ref Speed, 0.5f);
+            hit.transform.position = Vector3.SmoothDamp(hit.transform.position, transform.position, ref Speed, 0.1f);
         }
     }
     private void OnDrawGizmosSelected()
