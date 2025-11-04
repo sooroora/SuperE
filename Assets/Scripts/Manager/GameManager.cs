@@ -101,6 +101,8 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
+        if (!isPlay)
+            return;
         isPlay = false;
         soundManager.PlayBgm(EBgmName.GameOver);
 
