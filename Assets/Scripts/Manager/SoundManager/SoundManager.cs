@@ -148,6 +148,8 @@ public class SoundManager : MonoBehaviour
         if (aClip != null)
         {
             AudioSource audioSource = GetSFXAudioSource();
+            if(audioSource == null)
+                return;
             audioSource.volume = GetVolume(SfxVolume, _volume);
             audioSource.clip   = aClip;
             audioSource.Play();
@@ -202,13 +204,18 @@ public class SoundManager : MonoBehaviour
         foreach (AudioSource audioSource in sfxAudioSources)
         {
             if (audioSource.isPlaying == false)
+            {
                 return audioSource;
+            }
         }
 
+        // 깨지는 거 테스트
+        return null;
+        
         // 추가 안하고 제일 오래된 애를 쓰는 방법도 있음.
-        AudioSource newAudioSource = gameObject.AddComponent<AudioSource>();
-        sfxAudioSources.Add(newAudioSource);
-        return newAudioSource;
+        // AudioSource newAudioSource = gameObject.AddComponent<AudioSource>();
+        // sfxAudioSources.Add(newAudioSource);
+        // return newAudioSource;
     }
 
     void SetBgmVolume()
