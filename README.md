@@ -8,7 +8,12 @@
 5. [기술스택](#기술스택)
 
 ## 👨‍🏫 프로젝트 소개
++ 프로젝트 이름: SUPER E
++ 장르: 러닝 액션
++ 레퍼런스: 쿠키런, 윈드러너
++ 컨셉: MBTI E 성향을 가진 적들이 I 성향의 플레이어를 쫓음
 
+![타이틀](https://github.com/sooroora/SuperE/blob/main/Screenshots/%ED%83%80%EC%9D%B4%ED%8B%80.png)
 ## 팀소개
 + 곽호빈
 + 이요한
