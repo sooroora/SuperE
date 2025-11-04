@@ -19,7 +19,7 @@ public class Enemy : MonoBehaviour
         Vector3 targetPosition = transform.position - enemyDistance;
         StartCoroutine(Moving(targetPosition));
     }
-    public IEnumerator Moving(Vector3 targetPosition) // 충돌시 플레이어와의 거리를 줄이기 위한 로직
+    private IEnumerator Moving(Vector3 targetPosition) // 충돌시 플레이어와의 거리를 줄이기 위한 로직
     {
         while (Vector3.Distance(transform.position, targetPosition) > 0.1f)
         {

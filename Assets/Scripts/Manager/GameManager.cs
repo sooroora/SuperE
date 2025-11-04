@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private EnemySpawner enemySpawner;
     [SerializeField] private PetSpawner petSpawner;
 
+    private SoundManager soundManager;
+
     private int currentScore = 0;
     private int bestScore = 0;
 
@@ -35,6 +37,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        soundManager = SoundManager.Instance;
         bestScore = PlayerPrefs.GetInt("BestScore", bestScore);
         player = characterSpawner.SpawnCharacter();
         enemy = enemySpawner.SpawnEnemy();
@@ -63,6 +66,7 @@ public class GameManager : MonoBehaviour
 
     public void GameStart()
     {
+        soundManager.PlayBgm(EBgmName.InGame);
         currentScore = 0;
         isPlay = true;
     }
@@ -83,6 +87,7 @@ public class GameManager : MonoBehaviour
 
     public void MapSpeedUp()
     {
+        soundManager.PlayBgm(EBgmName.HurryUp);
         mapLooper.SetSpeed(levelSpeedUp);
     }
 
@@ -95,6 +100,7 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         isPlay = false;
+        soundManager.PlayBgm(EBgmName.GameOver);
 
         if (currentScore > bestScore)
         {
@@ -103,16 +109,6 @@ public class GameManager : MonoBehaviour
         }
 
         InGameUIManager.Instance.SetGameOver(currentScore, bestScore);
-    }
-
-    public void RestartGame()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
-
-    public void ReturnLobby()
-    {
-        //lobby or title æ¿¿∏∑Œ
     }
 
     public void TogglePause()
