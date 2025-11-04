@@ -919,7 +919,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lastPivot: {fileID: 7734810429962788330}
-  spline: {fileID: 0}
+  spline: {fileID: 2276517589622238727}
 --- !u!1 &3282292713531419680
 GameObject:
   m_ObjectHideFlags: 0
