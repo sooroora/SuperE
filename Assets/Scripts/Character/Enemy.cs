@@ -27,6 +27,7 @@ public class Enemy : MonoBehaviour
             if (GameManager.Instance.RemainingDistance < 0.5f)
             {
                 GameManager.Instance.GameOver();
+                break;
             }
             yield return null;
         }
