@@ -18,7 +18,6 @@ public class GameOverUI : MonoBehaviour
 
     private void Start()
     {
-        
         restartButton.onClick.AddListener(OnClickRestart);
         mainButton.onClick.AddListener(OnClickMain);
         
@@ -38,16 +37,11 @@ public class GameOverUI : MonoBehaviour
     private void OnClickRestart()
     {
         SceneTransferManager.LoadScene(ESceneName.GameScene);
-        // UnityEngine.SceneManagement.SceneManager.LoadScene(
-        //     UnityEngine.SceneManagement.SceneManager.GetActiveScene().name
-        // );
     }
 
     private void OnClickMain()
     {
         SceneTransferManager.ImmediagetLoadScene(ESceneName.TitleScene);
-        //SceneManager 만들어서 교체했어요~
-        //UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
     }
     public void ShowGameOver()
     {
