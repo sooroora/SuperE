@@ -38,9 +38,9 @@ public class GameOverUI : MonoBehaviour
     private void OnClickRestart()
     {
         SceneTransferManager.LoadScene(ESceneName.GameScene);
-        UnityEngine.SceneManagement.SceneManager.LoadScene(
-            UnityEngine.SceneManagement.SceneManager.GetActiveScene().name
-        );
+        // UnityEngine.SceneManagement.SceneManager.LoadScene(
+        //     UnityEngine.SceneManagement.SceneManager.GetActiveScene().name
+        // );
     }
 
     private void OnClickMain()

@@ -7,19 +7,23 @@ using static UnityEngine.GraphicsBuffer;
 public class Enemy : MonoBehaviour
 {
     [SerializeField] Vector3 enemyDistance = new Vector3(0.6f , 0 , 0);
-    private Vector3 speed = Vector3.zero; //ÀÌ¼ÓÀ» À§ÇÑ º¯¼ö
-
+    private Vector3 speed = Vector3.zero; //ï¿½Ì¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+    
+    Coroutine nowCoroutine;
+    
     public void Approach()
     {
         Vector3 targetPosition = transform.position + enemyDistance;
-        StartCoroutine(Moving(targetPosition));
+        StartMoving(targetPosition);
+        //nowCoroutine = StartCoroutine(Moving(targetPosition));
     }
     public void Retreat()
     {
         Vector3 targetPosition = transform.position - enemyDistance;
-        StartCoroutine(Moving(targetPosition));
+        StartMoving(targetPosition);
+        //nowCoroutine = StartCoroutine(Moving(targetPosition));
     }
-    private IEnumerator Moving(Vector3 targetPosition) // Ãæµ¹½Ã ÇÃ·¹ÀÌ¾î¿ÍÀÇ °Å¸®¸¦ ÁÙÀÌ±â À§ÇÑ ·ÎÁ÷
+    private IEnumerator Moving(Vector3 targetPosition) 
     {
         while (Vector3.Distance(transform.position, targetPosition) > 0.1f)
         {
@@ -32,4 +36,14 @@ public class Enemy : MonoBehaviour
             yield return null;
         }
     }
+
+    public void StartMoving(Vector3 targetPosition)
+    {
+        if(nowCoroutine !=null)
+            StopCoroutine(nowCoroutine);
+        
+        nowCoroutine = StartCoroutine(Moving(targetPosition));
+    }
+    
+    
 }
