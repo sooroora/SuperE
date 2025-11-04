@@ -189,7 +189,7 @@ MonoBehaviour:
   isFlap: 0
   item:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
 --- !u!50 &277207668568019584
 Rigidbody2D:
   serializedVersion: 4
