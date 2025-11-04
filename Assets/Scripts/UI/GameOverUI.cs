@@ -10,6 +10,7 @@ public class GameOverUI : MonoBehaviour
     [Header("UI Texts")]
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI bestScoreText;
+    public TextMeshProUGUI gameOverText;
 
     [Header("Buttons")]
     public Button restartButton;
@@ -23,6 +24,8 @@ public class GameOverUI : MonoBehaviour
 
         
         gameObject.SetActive(false);
+        if (gameOverText != null)
+            gameOverText.gameObject.SetActive(false);
     }
 
 
@@ -46,5 +49,11 @@ public class GameOverUI : MonoBehaviour
     {
         
         UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
+    }
+    public void ShowGameOver()
+    {
+        // 게임오버 시 호출
+        if (gameOverText != null)
+            gameOverText.gameObject.SetActive(true);
     }
 }

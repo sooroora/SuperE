@@ -33,5 +33,19 @@ public class OptionUI : MonoBehaviour
     {
         bool isActive = !sliderPanel.activeSelf;
         sliderPanel.SetActive(isActive);
+        if (isActive)
+        {
+            Time.timeScale = 0f; // 게임 일시정지
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
+        else
+        {
+            Time.timeScale = 1f; // 게임 재개
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
     }
+
+
 }
