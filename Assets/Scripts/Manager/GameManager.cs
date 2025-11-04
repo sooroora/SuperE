@@ -50,8 +50,6 @@ public class GameManager : MonoBehaviour
     {
         if (!isPlay)
         {
-            RemainingDistance = 0;
-            mapLooper.SetSpeed(0);
             return;
         }
 
@@ -75,11 +73,11 @@ public class GameManager : MonoBehaviour
 
     public void Crash()
     {
+        enemy.Approach();
         if (RemainingDistance < 1)
         {
             pet.PetSkill();
         }
-        enemy.Approach();
     }
 
     public void PlayerSpeedUp()
@@ -105,6 +103,8 @@ public class GameManager : MonoBehaviour
             return;
         isPlay = false;
         soundManager.PlayBgm(EBgmName.GameOver);
+        RemainingDistance = 0;
+        mapLooper.SetSpeed(0);
 
         if (currentScore > bestScore)
         {
