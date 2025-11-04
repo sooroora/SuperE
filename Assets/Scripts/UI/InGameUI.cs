@@ -24,7 +24,7 @@ public class InGameUI : MonoBehaviour
     }
     private void Update()
     {
-        // ╦е га╥╧юс ╟е╦╝ ╟╩╫е
+        // О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫ О©╫е╦О©╫ О©╫О©╫О©╫О©╫
         if (GameManager.Instance != null)
         {
             float distance = Mathf.Max(0, GameManager.Instance.RemainingDistance);
@@ -36,12 +36,12 @@ public class InGameUI : MonoBehaviour
     public void UpdateScore(int score)
     {
         if (scoreText != null)
-            scoreText.text = "Score: " + score;
+            scoreText.text = score.ToString();
     }
     private void UpdateDistance(float distance)
     {
         if (distanceText != null)
-            distanceText.text = "Distance: " + distance.ToString("F1");
+            distanceText.text = distance.ToString("F1") + " M";
 
     }
 
