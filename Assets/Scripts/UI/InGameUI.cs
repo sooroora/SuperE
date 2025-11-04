@@ -24,7 +24,6 @@ public class InGameUI : MonoBehaviour
     }
     private void Update()
     {
-        // �� ������ �Ÿ� ����
         if (GameManager.Instance != null)
         {
             float distance = Mathf.Max(0, GameManager.Instance.RemainingDistance);

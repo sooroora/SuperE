@@ -17,7 +17,6 @@ public class TitleUI : UIBase
 
     private void OnStartButtonClicked()
     {
-        //SceneTransferManager.LoadScene(ESceneName.GameScene);
         characterSelectUI.gameObject.SetActive(true);
         SoundManager.Instance.PlaySfxRandom(ESfxName.Click);
     }
