@@ -21,9 +21,7 @@ public class GameOverUI : MonoBehaviour
         
         restartButton.onClick.AddListener(OnClickRestart);
         mainButton.onClick.AddListener(OnClickMain);
-
         
-        gameObject.SetActive(false);
         if (gameOverText != null)
             gameOverText.gameObject.SetActive(false);
     }
