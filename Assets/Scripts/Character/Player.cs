@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
     private Vector3 ori; // 캐릭터 사이즈를 저장하기 위한 변수
     private Vector3 slide;// 캐릭터가 슬라이드시 사이즈를 줄이기 위한 변수
     private WaitForSeconds invincibleDuration = new WaitForSeconds(0.5f);
-    private SoundManager soundManager;
+    protected SoundManager soundManager;
 
     // Start is called before the first frame update
     private void Start()
