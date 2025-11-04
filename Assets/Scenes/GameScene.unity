@@ -1369,6 +1369,10 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5139544632490214940, guid: 476cb0ff86f7e194a858d777a816e15f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5194904802236388921, guid: 476cb0ff86f7e194a858d777a816e15f, type: 3}
       propertyPath: m_Name
       value: OptionUI
