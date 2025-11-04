@@ -25,8 +25,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float levelSpeedUp = 6;
 
     public bool isPlay;
-    public bool isCrash;
-
+    [SerializeField] private bool isLevelUp;
+    
     public float RemainingDistance { get; private set; }
 
     private void Awake()
@@ -58,9 +58,10 @@ public class GameManager : MonoBehaviour
         RemainingDistance = player.transform.position.x - enemy.transform.position.x;
 
         time += Time.deltaTime;
-        if (time > 30)
+        if (time > 30 && !isLevelUp)
         {
             MapSpeedUp();
+            isLevelUp = true;
         }
     }
 
@@ -69,6 +70,7 @@ public class GameManager : MonoBehaviour
         soundManager.PlayBgm(EBgmName.InGame);
         currentScore = 0;
         isPlay = true;
+        isLevelUp = false;
     }
 
     public void Crash()
