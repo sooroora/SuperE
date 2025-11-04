@@ -6,7 +6,7 @@
 3. [주요기능](#주요기능)
 4. [개발기간](#개발기간)
 5. [기술스택](#기술스택)
-
+---
 ## 👨‍🏫 프로젝트 소개
 + 프로젝트 이름: SUPER E
 + 장르: 러닝 액션
@@ -14,21 +14,26 @@
 + 컨셉: MBTI E 성향을 가진 적들이 I 성향의 플레이어를 쫓음
 
 ![타이틀](https://github.com/sooroora/SuperE/blob/main/Screenshots/%ED%83%80%EC%9D%B4%ED%8B%80.png)
+---
 ## 팀소개
 + 곽호빈
 + 이요한
 + 전수라
 + 정재우
 + 한승호
-
+---
 ## 💜 주요기능
 + 러닝 플레이 시스템
 + 맵 및 장애물 구성
 + 오브젝트 풀링을 통한 최적화
 
+---
+##📷 스크린샷
+
+
 ## ⏲️ 개발기간
 - 2025.10.29(수) ~ 2025.11.05(수)
-
+---
 ## 📚️ 기술스택
 
 ### ✔️ Language
@@ -38,7 +43,7 @@ Git
 ### ✔️ IDE
 Unity Editor (2022.3.62f2)
 
-Visual Studio 2022 (또는 Visual Studio Code)
+Visual Studio 2022
 ### ✔️ Framework
 Unity Engine
 
