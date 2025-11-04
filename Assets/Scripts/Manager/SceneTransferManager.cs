@@ -9,7 +9,7 @@ public static class SceneTransferManager
     /// <param name="sceneName">Scene 이름 ESceneName에 넣어놨어요</param>
     public static void LoadScene(ESceneName sceneName)
     {
-        PlayerPrefsManager.SetStringValue(ESceneTransferData.SceneName, nameof(sceneName));
+        PlayerPrefsManager.SetStringValue(ESceneTransferData.SceneName, sceneName.ToString());
         SceneManager.LoadScene("LoadingScene");
     }
 
@@ -20,7 +20,7 @@ public static class SceneTransferManager
     /// <param name="sceneName">Scene 이름 ESceneName에 넣어놨어요</param>
     public static void ImmediagetLoadScene(ESceneName sceneName)
     {
-        SceneManager.LoadScene(nameof(sceneName));
+        SceneManager.LoadScene(sceneName.ToString());
     }
     
 }
