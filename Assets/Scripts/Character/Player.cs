@@ -13,6 +13,8 @@ public class Player : MonoBehaviour
     protected Vector3 slide;// 캐릭터가 슬라이드시 사이즈를 줄이기 위한 변수
     protected Animator animator; // 애니메이터 변수
     protected bool isInvincible = false; //충돌무적
+    [SerializeField]protected WaitForSeconds invincibleDuration = new WaitForSeconds(2);
+    
 
     // Start is called before the first frame update
     protected virtual void Start()
@@ -62,26 +64,20 @@ public class Player : MonoBehaviour
             animator.SetBool("IsSliding", false);
             PlayerSize.size = ori;
         }
-        if (!animator.GetBool("Hited"))
-        {
-            isInvincible = false;
-        }
     }
     protected virtual void OnTriggerEnter2D(Collider2D collision) 
     {
-        if (!animator.GetBool("Hited"))
+        if (isInvincible)
+        {
+            return;
+        }
+        else
         {
             if (collision.GetComponent<Obstacle>() != null) //플레이어가 충돌시 벽 인지 체크
             {
-                isInvincible = true;
-                animator.SetBool("Hited", true);
+                StartCoroutine(InvincibleCoroutine());
                 GameManager.Instance.Crash();
             }
-        }
-        //else if()//아이템 사용
-        else
-        {
-            return;
         }
     }
     protected virtual void OnCollisionEnter2D(Collision2D collision) 
@@ -93,8 +89,12 @@ public class Player : MonoBehaviour
             jumpCount = 2; // 점프를 했다면 점프횟수를 돌려주기 위한 변수
         }
     }
-    public void StarpedAnimataion()
+    protected IEnumerator InvincibleCoroutine()
     {
-        animator.SetBool("Hited",false);
+        isInvincible = true;
+        animator.SetBool("Hited",true);
+        yield return invincibleDuration;
+        animator.SetBool("Hited", false);
+        isInvincible = false;
     }
 }
