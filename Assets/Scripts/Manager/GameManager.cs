@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private EnemySpawner enemySpawner;
     [SerializeField] private PetSpawner petSpawner;
 
+    private SoundManager soundManager;
+
     private int currentScore = 0;
     private int bestScore = 0;
 
@@ -23,8 +25,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float levelSpeedUp = 6;
 
     public bool isPlay;
-    public bool isCrash;
-
+    [SerializeField] private bool isLevelUp;
+    
     public float RemainingDistance { get; private set; }
 
     private void Awake()
@@ -35,6 +37,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        soundManager = SoundManager.Instance;
         bestScore = PlayerPrefs.GetInt("BestScore", bestScore);
         player = characterSpawner.SpawnCharacter();
         enemy = enemySpawner.SpawnEnemy();
@@ -55,16 +58,19 @@ public class GameManager : MonoBehaviour
         RemainingDistance = player.transform.position.x - enemy.transform.position.x;
 
         time += Time.deltaTime;
-        if (time > 30)
+        if (time > 30 && !isLevelUp)
         {
             MapSpeedUp();
+            isLevelUp = true;
         }
     }
 
     public void GameStart()
     {
+        soundManager.PlayBgm(EBgmName.InGame);
         currentScore = 0;
         isPlay = true;
+        isLevelUp = false;
     }
 
     public void Crash()
@@ -83,6 +89,7 @@ public class GameManager : MonoBehaviour
 
     public void MapSpeedUp()
     {
+        soundManager.PlayBgm(EBgmName.HurryUp);
         mapLooper.SetSpeed(levelSpeedUp);
     }
 
@@ -94,7 +101,10 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
+        if (!isPlay)
+            return;
         isPlay = false;
+        soundManager.PlayBgm(EBgmName.GameOver);
 
         if (currentScore > bestScore)
         {
