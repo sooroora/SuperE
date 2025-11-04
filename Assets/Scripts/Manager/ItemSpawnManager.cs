@@ -1,10 +1,7 @@
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using UnityEditorInternal.Profiling.Memory.Experimental;
 using UnityEngine;
 using UnityEngine.Splines;
-using static UnityEditor.Progress;
 
 public class ItemSpawnManager : MonoBehaviour
 {
