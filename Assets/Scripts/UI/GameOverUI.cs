@@ -39,7 +39,7 @@ public class GameOverUI : MonoBehaviour
 
     private void OnClickRestart()
     {
-        
+        SceneTransferManager.LoadScene(ESceneName.GameScene);
         UnityEngine.SceneManagement.SceneManager.LoadScene(
             UnityEngine.SceneManagement.SceneManager.GetActiveScene().name
         );
@@ -47,12 +47,13 @@ public class GameOverUI : MonoBehaviour
 
     private void OnClickMain()
     {
-        
-        UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
+        SceneTransferManager.ImmediagetLoadScene(ESceneName.TitleScene);
+        //SceneManager ë§Œë“¤ì–´ì„œ êµì²´í–ˆì–´ìš”~
+        //UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
     }
     public void ShowGameOver()
     {
-        // °ÔÀÓ¿À¹ö ½Ã È£Ãâ
+        // ï¿½ï¿½ï¿½Ó¿ï¿½ï¿½ï¿½ ï¿½ï¿½ È£ï¿½ï¿½
         if (gameOverText != null)
             gameOverText.gameObject.SetActive(true);
     }
