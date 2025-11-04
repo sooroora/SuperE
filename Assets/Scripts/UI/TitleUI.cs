@@ -10,20 +10,18 @@ public class TitleUI : UIBase
 
     private void Start()
     {
-        
         startButton.onClick.AddListener(OnStartButtonClicked);
         exitButton.onClick.AddListener(OnExitButtonClicked);
     }
 
     private void OnStartButtonClicked()
     {
-        
-        SceneManager.LoadScene("GameScene");
+        PlayerPrefsManager.SetStringValue(ESceneTransferData.SceneName, nameof(ESceneName.Title));
+        SceneManager.LoadScene("LoadingScene");
     }
 
     private void OnExitButtonClicked()
     {
-        
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #else

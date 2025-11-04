@@ -12,9 +12,8 @@ public class LoadingScene : MonoBehaviour
 
     IEnumerator LoadScene()
     {
-        // Scene 이름 불러와야함
-        
-        AsyncOperation async = SceneManager.LoadSceneAsync("GameScene_YohanMap");
+        string nextScene = PlayerPrefsManager.GetStringValue(ESceneTransferData.SceneName);     
+        AsyncOperation async = SceneManager.LoadSceneAsync(nextScene);
         async.allowSceneActivation = false;
 
         while (async.isDone == false)
