@@ -6,7 +6,6 @@
 3. [주요기능](#주요기능)
 4. [개발기간](#개발기간)
 5. [기술스택](#기술스택)
-6. [Trouble Shooting](#trouble-shooting)
 
 ## 👨‍🏫 프로젝트 소개
 
@@ -43,9 +42,3 @@ PC (Windows)
 ### ✔️  DBMS
 PlayerPrefs (로컬 저장)
 
-
-
-
-
-## Trouble Shooting
-[트러블슈팅 블로그](https://jjw6672.tistory.com/29 "티스토리")
