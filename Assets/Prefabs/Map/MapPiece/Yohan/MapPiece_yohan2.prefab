@@ -1000,8 +1000,8 @@ MonoBehaviour:
   - m_EditModeType: 1
     m_Knots:
     - Position:
-        x: -0.18539906
-        y: 0.03435731
+        x: -0.23539901
+        y: 0.23435724
         z: 0
       TangentIn:
         x: 0
@@ -1018,8 +1018,8 @@ MonoBehaviour:
           z: -0.5
           w: 0.5
     - Position:
-        x: 3.444601
-        y: 0.014357328
+        x: 3.454601
+        y: 0.24435735
         z: 0
       TangentIn:
         x: 0
@@ -1054,8 +1054,8 @@ MonoBehaviour:
           z: 0.50000066
           w: -0.49999934
     - Position:
-        x: 6.6646013
-        y: 0.06435728
+        x: 6.654601
+        y: 0.27435732
         z: 0
       TangentIn:
         x: 0
@@ -1072,8 +1072,8 @@ MonoBehaviour:
           z: 0.6532815
           w: -0.27059805
     - Position:
-        x: 11.214601
-        y: 0.11435723
+        x: 11.204601
+        y: 0.3043573
         z: 0
       TangentIn:
         x: 0

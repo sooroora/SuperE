@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Jaewoo : Player
 {
-    
-
     protected override void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Floor")) //플레이어가 충돌한것이 Floor인지 확인

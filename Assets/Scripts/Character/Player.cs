@@ -3,21 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 public class Player : MonoBehaviour
 {
-    public float flapForce = 20f; //점프력
-    public bool isFlap = false; //점프유무 확인
-    protected Rigidbody2D _rigidbody; // 물리엔진 변수값
+    protected bool isFlap = false; //점프유무 확인
     protected int jumpCount = 2; // 점프횟수
-    protected CapsuleCollider2D PlayerSize; // 캐릭터 사이즈 변수
-    protected Vector3 ori; // 캐릭터 사이즈를 저장하기 위한 변수
-    protected Vector3 slide;// 캐릭터가 슬라이드시 사이즈를 줄이기 위한 변수
     protected Animator animator; // 애니메이터 변수
     protected bool isInvincible = false; //충돌무적
-    [SerializeField] protected WaitForSeconds invincibleDuration = new WaitForSeconds(0.5f);
 
+    private float flapForce = 20f; //점프력
+    private Rigidbody2D _rigidbody; // 물리엔진 변수값
+    private CapsuleCollider2D PlayerSize; // 캐릭터 사이즈 변수
+    private Vector3 ori; // 캐릭터 사이즈를 저장하기 위한 변수
+    private Vector3 slide;// 캐릭터가 슬라이드시 사이즈를 줄이기 위한 변수
+    private WaitForSeconds invincibleDuration = new WaitForSeconds(1f);
+    private SoundManager soundManager;
 
     // Start is called before the first frame update
-    protected virtual void Start()
+    private void Start()
     {
+        soundManager = SoundManager.Instance;
         PlayerSize = GetComponent<CapsuleCollider2D>();
         _rigidbody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
@@ -26,19 +28,21 @@ public class Player : MonoBehaviour
     }
 
     // Update is called once per frame
-    protected virtual void Update()
+    private void Update()
     {
-
+         
         if (Input.GetKeyDown(KeyCode.LeftAlt)) //alt 키 입력시 1번은 점프 2번은 더블점프 
         {
             if (jumpCount >= 2) //점프
             {
+                soundManager.PlaySfxOnce(ESfxName.Jump);
                 animator.SetBool("IsJump", true);
                 _rigidbody.velocity = Vector3.up * flapForce;
                 jumpCount--;
             }
             else if (jumpCount == 1) //더블점프
             {
+                soundManager.PlaySfxOnce(ESfxName.Jump);
                 animator.SetBool("IsDubleJump", true);
                 _rigidbody.velocity = Vector3.up * (flapForce * 0.8f);
                 jumpCount--;
@@ -59,7 +63,6 @@ public class Player : MonoBehaviour
         }
         else
         {
-
             animator.SetBool("IsSliding", false);
             PlayerSize.size = ori;
         }
@@ -74,6 +77,7 @@ public class Player : MonoBehaviour
         {
             if (collision.GetComponent<Obstacle>() != null) //플레이어가 충돌시 벽 인지 체크
             {
+                soundManager.PlaySfxOnce(ESfxName.Crash);
                 StartCoroutine(InvincibleCoroutine());
                 GameManager.Instance.Crash();
             }

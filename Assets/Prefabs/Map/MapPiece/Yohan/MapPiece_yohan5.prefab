@@ -146,7 +146,7 @@ MonoBehaviour:
     m_Knots:
     - Position:
         x: -0.00969696
-        y: 0.18999982
+        y: 0.30999982
         z: 0
       TangentIn:
         x: 0
@@ -163,8 +163,8 @@ MonoBehaviour:
           z: -0.5
           w: 0.5
     - Position:
-        x: 6.330303
-        y: 0.18999982
+        x: 6.610303
+        y: 0.3499998
         z: 0
       TangentIn:
         x: 0

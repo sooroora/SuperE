@@ -105,16 +105,6 @@ public class GameManager : MonoBehaviour
         InGameUIManager.Instance.SetGameOver(currentScore, bestScore);
     }
 
-    public void RestartGame()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
-
-    public void ReturnLobby()
-    {
-        //lobby or title æ¿¿∏∑Œ
-    }
-
     public void TogglePause()
     {
         bool isPaused = Time.timeScale == 0f; 
