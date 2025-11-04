@@ -862,7 +862,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lastPivot: {fileID: 7734810429962788330}
-  spline: {fileID: 0}
+  spline: {fileID: 5232484820506774620}
 --- !u!1 &3919926556944714028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1000,8 +1000,8 @@ MonoBehaviour:
   - m_EditModeType: 1
     m_Knots:
     - Position:
-        x: -0.43539882
-        y: 0.004357338
+        x: -0.18539906
+        y: 0.03435731
         z: 0
       TangentIn:
         x: 0
@@ -1018,8 +1018,8 @@ MonoBehaviour:
           z: -0.5
           w: 0.5
     - Position:
-        x: 3.25
-        y: 0
+        x: 3.444601
+        y: 0.014357328
         z: 0
       TangentIn:
         x: 0
@@ -1036,26 +1036,26 @@ MonoBehaviour:
           z: -0.2801645
           w: 0.6492364
     - Position:
-        x: 3.5
-        y: 4.25
+        x: 5.164601
+        y: 4.4343576
         z: 0
       TangentIn:
         x: 0
         y: 0
-        z: 0
+        z: -2.11
       TangentOut:
         x: 0
         y: 0
-        z: 0
+        z: 2.11
       Rotation:
         value:
-          x: 0.6492364
-          y: -0.28016448
-          z: 0.28016454
-          w: -0.6492363
+          x: 0.50000066
+          y: -0.49999934
+          z: 0.50000066
+          w: -0.49999934
     - Position:
-        x: 7
-        y: 4.25
+        x: 6.6646013
+        y: 0.06435728
         z: 0
       TangentIn:
         x: 0
@@ -1072,8 +1072,8 @@ MonoBehaviour:
           z: 0.6532815
           w: -0.27059805
     - Position:
-        x: 6.674601
-        y: -0.065642715
+        x: 11.214601
+        y: 0.11435723
         z: 0
       TangentIn:
         x: 0
@@ -1089,32 +1089,12 @@ MonoBehaviour:
           y: 0.65678215
           z: -0.65678215
           w: 0.26198703
-    - Position:
-        x: 11.744601
-        y: -0.10564268
-        z: 0
-      TangentIn:
-        x: 0
-        y: 0
-        z: 0
-      TangentOut:
-        x: 0
-        y: 0
-        z: 0
-      Rotation:
-        value:
-          x: 0.49877712
-          y: -0.5012199
-          z: 0.5012199
-          w: -0.49877706
     m_MetaData:
     - Mode: 1
       Tension: 0.5
     - Mode: 1
       Tension: 0.5
-    - Mode: 1
-      Tension: 0.5
-    - Mode: 1
+    - Mode: 2
       Tension: 0.5
     - Mode: 1
       Tension: 0.5

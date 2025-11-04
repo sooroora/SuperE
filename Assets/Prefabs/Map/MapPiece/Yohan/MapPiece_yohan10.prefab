@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lastPivot: {fileID: 7734810429962788330}
-  spline: {fileID: 0}
+  spline: {fileID: 846998689909019484}
 --- !u!1 &2642560839495193552
 GameObject:
   m_ObjectHideFlags: 0
@@ -1001,9 +1001,9 @@ MonoBehaviour:
   - m_EditModeType: 1
     m_Knots:
     - Position:
-        x: -0.000000059604645
-        y: 0
-        z: 0
+        x: -0.20141774
+        y: -0.2068739
+        z: -0
       TangentIn:
         x: 0
         y: 0
@@ -1019,8 +1019,8 @@ MonoBehaviour:
           z: 0.27059805
           w: 0.6532815
     - Position:
-        x: -0.000000059604645
-        y: 2.5
+        x: -0.16141775
+        y: 1.8131261
         z: 0
       TangentIn:
         x: 0
@@ -1037,9 +1037,9 @@ MonoBehaviour:
           z: -0.2524242
           w: 0.66051644
     - Position:
-        x: 2.2695515
-        y: 2.3969874
-        z: -0.00000009557266
+        x: 1.6485822
+        y: 1.7931261
+        z: -0
       TangentIn:
         x: 0
         y: 0
@@ -1055,9 +1055,9 @@ MonoBehaviour:
           z: 0.6455466
           w: -0.28856477
     - Position:
-        x: 2.25
-        y: 0
-        z: 0
+        x: 1.7085822
+        y: -0.24687433
+        z: -0
       TangentIn:
         x: 0
         y: 0

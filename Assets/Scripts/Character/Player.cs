@@ -26,6 +26,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     protected virtual void Update()
     {
+         
         if (Input.GetKeyDown(KeyCode.LeftAlt)) //alt 키 입력시 1번은 점프 2번은 더블점프 
         {
             if (jumpCount >= 2) //점프
