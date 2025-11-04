@@ -1,20 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class Player : MonoBehaviour
 {
     protected bool isFlap = false; //점프유무 확인
     protected int jumpCount = 2; // 점프횟수
     protected Animator animator; // 애니메이터 변수
     protected bool isInvincible = false; //충돌무적
-
-    [SerializeField] private float flapForce = 20f; //점프력
+    private float flapForce = 30f; //점프력
     private Rigidbody2D _rigidbody; // 물리엔진 변수값
     private CapsuleCollider2D PlayerSize; // 캐릭터 사이즈 변수
     private Vector3 ori; // 캐릭터 사이즈를 저장하기 위한 변수
     private Vector3 slide;// 캐릭터가 슬라이드시 사이즈를 줄이기 위한 변수
-    private WaitForSeconds invincibleDuration = new WaitForSeconds(1f);
+    private WaitForSeconds invincibleDuration = new WaitForSeconds(0.5f);
     private SoundManager soundManager;
 
     // Start is called before the first frame update
@@ -31,6 +29,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+         
         if (Input.GetKeyDown(KeyCode.LeftAlt)) //alt 키 입력시 1번은 점프 2번은 더블점프 
         {
             if (jumpCount >= 2) //점프
@@ -61,13 +60,13 @@ public class Player : MonoBehaviour
                 PlayerSize.size = slide;
             }
         }
-        else 
+        else
         {
             animator.SetBool("IsSliding", false);
             PlayerSize.size = ori;
         }
     }
-    protected virtual void OnTriggerEnter2D(Collider2D collision) 
+    protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
         if (isInvincible)
         {
@@ -83,7 +82,7 @@ public class Player : MonoBehaviour
             }
         }
     }
-    protected virtual void OnCollisionEnter2D(Collision2D collision) 
+    protected virtual void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Floor")) //플레이어가 충돌한것이 Floor인지 확인
         {
@@ -95,9 +94,10 @@ public class Player : MonoBehaviour
     protected IEnumerator InvincibleCoroutine()
     {
         isInvincible = true;
-        animator.SetBool("Hited",true);
+        animator.SetBool("Hited", true);
         yield return invincibleDuration;
         animator.SetBool("Hited", false);
         isInvincible = false;
     }
 }
+
