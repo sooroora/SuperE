@@ -41,8 +41,8 @@ public class InGameUI : MonoBehaviour
     private void UpdateDistance(float distance)
     {
         if (distanceText != null)
-            distanceText.text = "Distance: " + Mathf.RoundToInt(distance).ToString();
-        
+            distanceText.text = "Distance: " + distance.ToString("F1");
+
     }
 
 
