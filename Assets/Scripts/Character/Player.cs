@@ -7,13 +7,12 @@ public class Player : MonoBehaviour
     protected int jumpCount = 2; // 점프횟수
     protected Animator animator; // 애니메이터 변수
     protected bool isInvincible = false; //충돌무적
-
-    private float flapForce = 20f; //점프력
+    private float flapForce = 30f; //점프력
     private Rigidbody2D _rigidbody; // 물리엔진 변수값
     private CapsuleCollider2D PlayerSize; // 캐릭터 사이즈 변수
     private Vector3 ori; // 캐릭터 사이즈를 저장하기 위한 변수
     private Vector3 slide;// 캐릭터가 슬라이드시 사이즈를 줄이기 위한 변수
-    private WaitForSeconds invincibleDuration = new WaitForSeconds(1f);
+    private WaitForSeconds invincibleDuration = new WaitForSeconds(0.5f);
     private SoundManager soundManager;
 
     // Start is called before the first frame update
