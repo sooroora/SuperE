@@ -12,7 +12,6 @@ public class OptionUI : MonoBehaviour
 
     private void Start()
     {
-
         masterSlider.value = PlayerPrefsManager.GetFloatValue<ESoundSettingName>(ESoundSettingName.MasterVolume);
         bgmSlider.value = PlayerPrefsManager.GetFloatValue<ESoundSettingName>(ESoundSettingName.BgmVolume);
         sfxSlider.value = PlayerPrefsManager.GetFloatValue<ESoundSettingName>(ESoundSettingName.SfxVolume);
@@ -21,14 +20,21 @@ public class OptionUI : MonoBehaviour
         masterSlider.onValueChanged.AddListener(v => SoundManager.Instance.SetMasterVolume(v));
         bgmSlider.onValueChanged.AddListener(v => SoundManager.Instance.SetBgmVolume(v));
         sfxSlider.onValueChanged.AddListener(v => SoundManager.Instance.SetSfxVolume(v));
+        
     }
     public GameObject slidersPanel;
     private bool isActive = false;
+    
     public void ToggleSliders()
     {
         isActive = !isActive;
+        
+        Time.timeScale = isActive ? 0 : 1;
+        
         slidersPanel.SetActive(isActive);
+        
     }
+    
     public void ToggleSliderPanel()
     {
         bool isActive = !sliderPanel.activeSelf;

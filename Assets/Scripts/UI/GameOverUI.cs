@@ -31,8 +31,8 @@ public class GameOverUI : MonoBehaviour
     {
         gameObject.SetActive(true);
 
-        scoreText.text = $"Score: {score}";
-        bestScoreText.text = $"Best: {bestScore}";
+        scoreText.text     = score.ToString();
+        bestScoreText.text = bestScore.ToString();
     }
 
     private void OnClickRestart()
