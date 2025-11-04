@@ -7,11 +7,7 @@ public class Sura : Player
 {
     protected override void OnTriggerEnter2D(Collider2D collision)
     {
-        if (isInvincible)
-        {
-            return;
-        }
-        else
+        if (!animator.GetBool("Hited"))
         {
             if (collision.GetComponent<Obstacle>() != null) //플레이어가 충돌시 벽 인지 체크
             {
@@ -23,13 +19,13 @@ public class Sura : Player
                 }
                 else
                 {
-                    StartCoroutine(InvincibleCoroutine());
+                    animator.SetBool("Hited", true);
                     GameManager.Instance.Crash();
                 }
 
             }
         }
-
-
+        else return;
+            
     }
 }
