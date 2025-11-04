@@ -16,7 +16,7 @@ public class Item : MonoBehaviour
 
     protected virtual void ApplyEffect()
     {
-        SoundManager.Instance.PlaySfxOnce(ESfxName.Coin);
+        SoundManager.Instance.PlaySfxOnce(ESfxName.Coin,0.1f);
     }
 
     private void OnTriggerEnter2D(Collider2D other)

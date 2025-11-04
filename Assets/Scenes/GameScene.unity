@@ -554,7 +554,7 @@ MonoBehaviour:
   petSpawner: {fileID: 1364700390}
   levelSpeedUp: 6
   isPlay: 0
-  isCrash: 0
+  isLevelUp: 0
 --- !u!4 &277783599
 Transform:
   m_ObjectHideFlags: 0
@@ -1184,22 +1184,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: CharacterSpawner
       objectReference: {fileID: 0}
-    - target: {fileID: 4041734099619970373, guid: f5b8e1e1c2d8236489a243bf0f8cf6cb, type: 3}
-      propertyPath: sqawnPoint.y
-      value: -3.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4041734099619970373, guid: f5b8e1e1c2d8236489a243bf0f8cf6cb, type: 3}
-      propertyPath: characterPrefabs.Array.data[0]
-      value: 
-      objectReference: {fileID: 5733023819502272400, guid: 62e023bd2bde44542a005b92ed57e2a1, type: 3}
-    - target: {fileID: 4041734099619970373, guid: f5b8e1e1c2d8236489a243bf0f8cf6cb, type: 3}
-      propertyPath: characterPrefabs.Array.data[1]
-      value: 
-      objectReference: {fileID: 6691761871275147355, guid: c96cb131f12647546a8d5b6ce38b48bb, type: 3}
-    - target: {fileID: 4041734099619970373, guid: f5b8e1e1c2d8236489a243bf0f8cf6cb, type: 3}
-      propertyPath: characterPrefabs.Array.data[2]
-      value: 
-      objectReference: {fileID: 4557768098865545908, guid: 1b74f3f203e6f64458ca8727e9e94bd6, type: 3}
     - target: {fileID: 8461589736005008512, guid: f5b8e1e1c2d8236489a243bf0f8cf6cb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.6382447

@@ -214,6 +214,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CharacterSelectUI
       objectReference: {fileID: 0}
+    - target: {fileID: 5775483340505092024, guid: bb347284e44b3c6459a5ea2592a7de1a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -281,6 +285,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 696465732887529176, guid: bb347284e44b3c6459a5ea2592a7de1a, type: 3}
   m_PrefabInstance: {fileID: 486683582}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1340308138 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 328509177132177300, guid: bb347284e44b3c6459a5ea2592a7de1a, type: 3}
+  m_PrefabInstance: {fileID: 486683582}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8986728d88c0e9946bd05ae69ea2b71d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1480107768
 GameObject:
   m_ObjectHideFlags: 0
@@ -839,6 +854,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TitleUI
       objectReference: {fileID: 0}
+    - target: {fileID: 4284585199138451391, guid: ea508ff77dc8f6049aaa93eea0cc8b26, type: 3}
+      propertyPath: characterSelectUI
+      value: 
+      objectReference: {fileID: 1340308138}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

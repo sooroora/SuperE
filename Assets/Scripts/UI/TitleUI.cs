@@ -7,6 +7,7 @@ public class TitleUI : UIBase
 {
     [SerializeField] private Button startButton;
     [SerializeField] private Button exitButton;
+    [SerializeField] CharacterSelectUI characterSelectUI;
 
     private void Start()
     {
@@ -16,7 +17,8 @@ public class TitleUI : UIBase
 
     private void OnStartButtonClicked()
     {
-        SceneTransferManager.LoadScene(ESceneName.GameScene);
+        //SceneTransferManager.LoadScene(ESceneName.GameScene);
+        characterSelectUI.gameObject.SetActive(true);
         SoundManager.Instance.PlaySfxRandom(ESfxName.Click);
     }
 

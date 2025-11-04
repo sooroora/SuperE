@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterPrefabs:
+  - {fileID: 6691761871275147355, guid: c96cb131f12647546a8d5b6ce38b48bb, type: 3}
   - {fileID: 4557768098865545908, guid: 1b74f3f203e6f64458ca8727e9e94bd6, type: 3}
   - {fileID: 5733023819502272400, guid: 62e023bd2bde44542a005b92ed57e2a1, type: 3}
-  - {fileID: 6691761871275147355, guid: c96cb131f12647546a8d5b6ce38b48bb, type: 3}
-  sqawnPoint: {x: 0, y: 0, z: 0}
+  sqawnPoint: {x: 0, y: -3.7, z: 0}
