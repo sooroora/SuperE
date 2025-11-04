@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 8243629939726436060}
   - component: {fileID: 109115151249868493}
   - component: {fileID: -3665854232824845998}
+  - component: {fileID: 212010894431498932}
   - component: {fileID: 4841600680567530610}
   - component: {fileID: 5640834904713679258}
   m_Layer: 0
@@ -185,6 +186,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyDistance: {x: 0.5, y: 0, z: 0}
+--- !u!50 &212010894431498932
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8206442954293346897}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 1
 --- !u!70 &4841600680567530610
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
