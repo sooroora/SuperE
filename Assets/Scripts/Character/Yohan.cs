@@ -6,11 +6,8 @@ using static UnityEditor.Progress;
 
 public class Yohan : Player
 {
-    protected Vector3 Speed = Vector3.zero;
+    private Vector3 Speed = Vector3.zero;
     [SerializeField] LayerMask item;
-    private void Awake()
-    {
-    }
     private void FixedUpdate()
     {
         Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, 4f, item);
