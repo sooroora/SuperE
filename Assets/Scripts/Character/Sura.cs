@@ -13,14 +13,24 @@ public class Sura : Player
         }
         else
         {
-            if (collision.GetComponent<Obstacle>() != null) //플레이어가 충돌시 벽 인지 체크
+            if (collision.GetComponent<Obstacle>() != null) 
             {
-                soundManager.PlaySfxOnce(ESfxName.Crash);
-                StartCoroutine(InvincibleCoroutine());
-                GameManager.Instance.Crash();
+                int destroy = Random.Range(1, 11);
+                Debug.Log(destroy);
+                if (destroy <= 3)
+                {
+                    Destroy(collision.gameObject);
+                }
+                else
+                {
+                    soundManager.PlaySfxOnce(ESfxName.Crash);
+                    StartCoroutine(InvincibleCoroutine());
+                    GameManager.Instance.Crash();
+                }
             }
         }
     }
-
-
 }
+
+
+
