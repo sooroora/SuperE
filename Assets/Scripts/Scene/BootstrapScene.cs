@@ -14,6 +14,5 @@ public class BootstrapScene : MonoBehaviour
         {
             SceneManager.LoadScene(nameof(ESceneName.BootstrapScene),LoadSceneMode.Additive);
         }
-        
     }
 }

@@ -1,9 +1,3 @@
-public enum ESoundSettingName
-{
-    MasterVolume,
-    BgmVolume,
-    SfxVolume,
-}
 
 public enum ESceneTransferData
 {

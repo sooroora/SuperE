@@ -2,8 +2,11 @@ using System;
 using UnityEngine;
 
 
+// enum 으로 정의되지 않은 친구는 사용할 수 없다는 컨셉...
 public static class PlayerPrefsManager
 {
+    
+    
     public static int GetIntValue<T>(T key) where T : Enum
     {
         if (PlayerPrefs.HasKey(key.ToString()))
@@ -13,7 +16,6 @@ public static class PlayerPrefsManager
         return 0;
     }
     
-    // 나중에 바꿔야함
     public static float GetFloatValue<T>(T key) where T : Enum
     {
         if (PlayerPrefs.HasKey(key.ToString()))

@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "AudioClip", menuName = "Sound Data/CreateAudioClip")]
-public class SoundClip : ScriptableObject
+[CreateAssetMenu(fileName = "AudioClipGroup", menuName = "Sound Data/CreateAudioClipGroup")]
+public class AudioClipGroup : ScriptableObject
 {
     public List<AudioClip> tables;
     

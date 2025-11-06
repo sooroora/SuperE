@@ -39,8 +39,8 @@ public class SoundManager : MonoBehaviour
         private set => instance = value;
     }
 
-    Dictionary<ESfxName, SoundClip> SFXTable = new Dictionary<ESfxName, SoundClip>();
-    Dictionary<EBgmName, SoundClip> BGMTable = new Dictionary<EBgmName, SoundClip>();
+    Dictionary<ESfxName, AudioClipGroup> SFXTable = new Dictionary<ESfxName, AudioClipGroup>();
+    Dictionary<EBgmName, AudioClipGroup> BGMTable = new Dictionary<EBgmName, AudioClipGroup>();
 
     AudioSource bgmAudioSource;
     private List<AudioSource> sfxAudioSources;
@@ -76,14 +76,14 @@ public class SoundManager : MonoBehaviour
 
     void ReadSoundClips()
     {
-        SoundClip[] bgmClips = Resources.LoadAll<SoundClip>("Sounds/BGM");
-        SoundClip[] sfxClips = Resources.LoadAll<SoundClip>("Sounds/SFX");
+        AudioClipGroup[] bgmClips = Resources.LoadAll<AudioClipGroup>("Sounds/BGM");
+        AudioClipGroup[] sfxClips = Resources.LoadAll<AudioClipGroup>("Sounds/SFX");
 
         SFXTable = ((ESfxName[])Enum.GetValues(typeof(ESfxName))).ToDictionary(part => part,
-            part => (SoundClip)null);
+            part => (AudioClipGroup)null);
 
         BGMTable = ((EBgmName[])Enum.GetValues(typeof(EBgmName))).ToDictionary(part => part,
-            part => (SoundClip)null);
+            part => (AudioClipGroup)null);
 
         for (int i = 0; i < bgmClips.Length; i++)
         {
@@ -123,7 +123,7 @@ public class SoundManager : MonoBehaviour
     public void PlaySfxRandom(ESfxName sfxName, float volume = 1.0f)
     {
         AudioClip aClip = null;
-        if (SFXTable.TryGetValue(sfxName, out SoundClip clip))
+        if (SFXTable.TryGetValue(sfxName, out AudioClipGroup clip))
         {
             aClip = clip.GetRandomClip();
         }
@@ -135,7 +135,7 @@ public class SoundManager : MonoBehaviour
     public void PlaySfxOnce(ESfxName sfxName, float volume = 1.0f, int idx = 0)
     {
         AudioClip aClip = null;
-        if (SFXTable.TryGetValue(sfxName, out SoundClip clip))
+        if (SFXTable.TryGetValue(sfxName, out AudioClipGroup clip))
         {
             aClip = clip.GetClip(idx);
         }
@@ -159,7 +159,7 @@ public class SoundManager : MonoBehaviour
     public void PlayBgm(EBgmName bgmName, float _volume = 1.0f, bool _loop = true, float pitch = 1.0f)
     {
         AudioClip aClip = null;
-        if (BGMTable.TryGetValue(bgmName, out SoundClip clip))
+        if (BGMTable.TryGetValue(bgmName, out AudioClipGroup clip))
         {
             aClip = clip.GetClip();
         }

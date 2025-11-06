@@ -1,0 +1,689 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2780342b-e527-4c37-aa6a-352faea4af4c" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test/ItemPlaceExample.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test/ItemPlaceExample.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Character/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Character/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enum/CommonEnum.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enum/CommonEnum.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enum/ESfxName.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enum/ESfxName.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enum/ExampleSoundManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enum/ExampleSoundManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/PlayerPrefsManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/PlayerPrefsManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/SoundManager/EBgmName.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/SoundManager/EBgmName.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/SoundManager/SoundClip.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/SoundManager/AudioClipGroup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/SoundManager/SoundClip.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/SoundManager/AudioClipGroup.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/SoundManager/SoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/SoundManager/SoundManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scene/BootstrapScene.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Scene/BootstrapScene.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/10.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/11.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/12.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/13.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/14.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/14.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/15.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/15.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/16.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/17.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/17.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/18.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/18.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/19.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/20.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/20.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/21.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/21.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/22.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/22.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/23.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/23.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/24.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/24.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/25.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/25.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/26.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/26.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/27.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/27.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/28.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/28.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/29.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/29.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/30.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/30.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/31.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/31.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/32.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/33.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/33.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/34.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/34.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/35.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/35.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/36.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/36.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/37.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/37.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/38.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/38.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/39.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/39.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/40.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/40.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/41.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/41.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/6.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/7.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/8.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/BackGround/9.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Background/Additional Sky.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Background/Additional Sky.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Background/Additional Water.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Background/Additional Water.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Background/BG Image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Background/BG Image.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Background/Big Clouds.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Background/Big Clouds.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Background/Small Cloud 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Background/Small Cloud 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Background/Small Cloud 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Background/Small Cloud 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Background/Small Cloud 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Background/Small Cloud 3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Background/Water Reflect Big 01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Background/Water Reflect Big 01.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Background/Water Reflect Big 02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Background/Water Reflect Big 02.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Background/Water Reflect Big 03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Background/Water Reflect Big 03.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Background/Water Reflect Big 04.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Background/Water Reflect Big 04.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Background/Water Reflect Medium 01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Background/Water Reflect Medium 01.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Background/Water Reflect Medium 02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Background/Water Reflect Medium 02.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Background/Water Reflect Medium 03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Background/Water Reflect Medium 03.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Background/Water Reflect Medium 04.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Background/Water Reflect Medium 04.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Background/Water Reflect Small 01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Background/Water Reflect Small 01.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Background/Water Reflect Small 02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Background/Water Reflect Small 02.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Background/Water Reflect Small 03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Background/Water Reflect Small 03.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Background/Water Reflect Small 04.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Background/Water Reflect Small 04.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Effect.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Effect/star_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Effect/star_01.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Effect/star_02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Effect/star_02.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Effect/star_03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Effect/star_03.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Effect/star_04.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Effect/star_04.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Effect/star_05.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Effect/star_05.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Effect/star_06.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Effect/star_06.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Effect/star_07.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Effect/star_07.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Items.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Items/MonedaD.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Items/MonedaD.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Items/MonedaP.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Items/MonedaP.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Items/MonedaR.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Items/MonedaR.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Items/spr_coin_ama.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Items/spr_coin_ama.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Items/spr_coin_azu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Items/spr_coin_azu.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Items/spr_coin_gri.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Items/spr_coin_gri.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Items/spr_coin_roj.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Items/spr_coin_roj.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Items/spr_coin_strip4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Items/spr_coin_strip4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/1 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/1 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/1 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/1 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/1 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/1 3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/1 4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/1 4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/1 5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/1 5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/2 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/2 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/2 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/2 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/3 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/3 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/3 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/3 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/3 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/3 3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/3 4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/3 4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/3 5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/3 5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/4 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/4 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/6 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/6 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/6.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/Back Palm Tree Regular 01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/Back Palm Tree Regular 01.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/Back Palm Tree Regular 02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/Back Palm Tree Regular 02.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/Back Palm Tree Regular 03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/Back Palm Tree Regular 03.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/Back Palm Tree Regular 04.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/Back Palm Tree Regular 04.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/Flag 01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/Flag 01.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/Flag 02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/Flag 02.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/Flag 03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/Flag 03.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/Flag 04.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/Flag 04.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/Flag 05.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/Flag 05.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/Flag 06.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/Flag 06.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/Flag 07.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/Flag 07.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/Flag 08.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/Flag 08.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/Flag 09.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/Flag 09.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/obstacle_00.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/obstacle_00.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/obstacle_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Obstacles/obstacle_01.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Pet.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Pet/angel_idle_anim_f0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Pet/angel_idle_anim_f0.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Platform.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Platform/FloorBase.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Platform/FloorBase.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Platform/Tiles.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Platform/Tiles/Terrain (32x32)_1.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Platform/Tiles/Terrain (32x32)_1.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Platform/Tiles/Terrain (32x32)_12.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Platform/Tiles/Terrain (32x32)_12.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Platform/ruletile_simple.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Platform/ruletile_simple.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Platform/tiles.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Platform/tiles.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Title.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Title/title.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Title/title.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Title/title_gray.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Title/title_gray.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/211871_pause_icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/211871_pause_icon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/3669309_pause_circle_filled_ic_icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/3669309_pause_circle_filled_ic_icon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/Setting.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/Setting.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/arrow_basic_e.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/arrow_basic_e.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/arrow_basic_e_small.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/arrow_basic_e_small.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/arrow_basic_n.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/arrow_basic_n.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/arrow_basic_n_small.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/arrow_basic_n_small.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/arrow_basic_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/arrow_basic_s.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/arrow_basic_s_small.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/arrow_basic_s_small.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/arrow_basic_w.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/arrow_basic_w.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/arrow_basic_w_small.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/arrow_basic_w_small.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/arrow_decorative_e.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/arrow_decorative_e.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/arrow_decorative_e_small.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/arrow_decorative_e_small.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/arrow_decorative_n.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/arrow_decorative_n.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/arrow_decorative_n_small.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/arrow_decorative_n_small.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/arrow_decorative_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/arrow_decorative_s.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/arrow_decorative_s_small.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/arrow_decorative_s_small.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/arrow_decorative_w.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/arrow_decorative_w.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/arrow_decorative_w_small.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/arrow_decorative_w_small.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/button_rectangle_border.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/button_rectangle_border.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/button_rectangle_depth_border.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/button_rectangle_depth_border.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/button_rectangle_depth_flat.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/button_rectangle_depth_flat.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/button_rectangle_depth_gloss.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/button_rectangle_depth_gloss.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/button_rectangle_depth_gradient.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/button_rectangle_depth_gradient.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/button_rectangle_depth_line.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/button_rectangle_depth_line.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/button_rectangle_flat.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/button_rectangle_flat.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/button_rectangle_gloss.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/button_rectangle_gloss.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/button_rectangle_gradient.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/button_rectangle_gradient.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/button_rectangle_line.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/button_rectangle_line.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/button_round_border.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/button_round_border.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/button_round_depth_border.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/button_round_depth_border.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/button_round_depth_flat.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/button_round_depth_flat.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/button_round_depth_gloss.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/button_round_depth_gloss.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/button_round_depth_gradient.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/button_round_depth_gradient.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/button_round_depth_line.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/button_round_depth_line.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/button_round_flat.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/button_round_flat.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/button_round_gloss.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/button_round_gloss.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/button_round_gradient.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/button_round_gradient.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/button_round_line.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/button_round_line.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/button_square_border.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/button_square_border.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/button_square_depth_border.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/button_square_depth_border.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/button_square_depth_flat.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/button_square_depth_flat.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/button_square_depth_gloss.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/button_square_depth_gloss.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/button_square_depth_gradient.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/button_square_depth_gradient.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/button_square_depth_line.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/button_square_depth_line.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/button_square_flat.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/button_square_flat.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/button_square_gloss.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/button_square_gloss.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/button_square_gradient.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/button_square_gradient.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/button_square_line.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/button_square_line.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/check_round_color.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/check_round_color.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/check_round_grey.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/check_round_grey.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/check_round_grey_circle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/check_round_grey_circle.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/check_round_round_circle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/check_round_round_circle.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/check_square_color.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/check_square_color.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/check_square_color_checkmark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/check_square_color_checkmark.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/check_square_color_cross.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/check_square_color_cross.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/check_square_color_square.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/check_square_color_square.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/check_square_grey.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/check_square_grey.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/check_square_grey_checkmark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/check_square_grey_checkmark.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/check_square_grey_cross.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/check_square_grey_cross.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/check_square_grey_square.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/check_square_grey_square.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/icon_checkmark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/icon_checkmark.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/icon_circle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/icon_circle.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/icon_cross.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/icon_cross.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/icon_outline_checkmark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/icon_outline_checkmark.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/icon_outline_circle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/icon_outline_circle.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/icon_outline_cross.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/icon_outline_cross.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/icon_outline_square.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/icon_outline_square.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/icon_square.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/icon_square.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/slide_hangle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/slide_hangle.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/slide_horizontal_color.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/slide_horizontal_color.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/slide_horizontal_color_section.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/slide_horizontal_color_section.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/slide_horizontal_color_section_wide.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/slide_horizontal_color_section_wide.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/slide_horizontal_grey.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/slide_horizontal_grey.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/slide_horizontal_grey_section.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/slide_horizontal_grey_section.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/slide_horizontal_grey_section_wide.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/slide_horizontal_grey_section_wide.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/slide_vertical_color.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/slide_vertical_color.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/slide_vertical_color_section.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/slide_vertical_color_section.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/slide_vertical_color_section_wide.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/slide_vertical_color_section_wide.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/slide_vertical_grey.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/slide_vertical_grey.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/slide_vertical_grey_section.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/slide_vertical_grey_section.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/slide_vertical_grey_section_wide.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/slide_vertical_grey_section_wide.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/star.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/star.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/star_outline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/star_outline.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/star_outline_depth.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/UI/star_outline_depth.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/player.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/player/Body.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/player/Body/jump_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/player/Body/jump_0.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/player/Body/run_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/player/Body/run_0.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/player/Body/run_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/player/Body/run_1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/player/Body/run_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/player/Body/run_2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/player/Body/run_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/player/Body/run_3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/player/Body/run_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/player/Body/run_4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/player/Body/run_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/player/Body/run_5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/player/Body/slide_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/player/Body/slide_0.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/player/Head.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/player/Head/head_hobin_color.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/player/Head/head_hobin_color.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/player/Head/head_jaewoo_color.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/player/Head/head_jaewoo_color.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/player/Head/head_seungho_color.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/player/Head/head_seungho_color.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/player/Head/head_sura_color.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/player/Head/head_sura_color.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/player/Head/head_yohan_color.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/player/Head/head_yohan_color.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/player/bonk.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/player/bonk.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/player/down.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/player/down.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/player/fall.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/player/fall.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/player/idle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/player/idle.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/player/jump.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/player/jump.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/player/pivot.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/player/pivot.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/player/push.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/player/push.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/player/run.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/player/run.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/player/spinjump.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/player/spinjump.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/player/up.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/player/up.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/player/walk.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/player/walk.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/player/wall_peek.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/player/wall_peek.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/player/wall_slide.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/player/wall_slide.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DpaMonitoringSettings">
+    <option name="firstShow" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Prefabs/Map/MapPiece/Yohan/MapPiece_yohan3.prefab" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enum/CommonEnum.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Manager/SceneTransferManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Scene/BootstrapScene.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Shaders/UIColorOverlay.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utility/Utility.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/37cc348edc804f4cb176b63962c716e7177200/13/0a969786/GameObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/37cc348edc804f4cb176b63962c716e7177200/85/0644cd08/PlayerPrefs.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/37cc348edc804f4cb176b63962c716e7177200/9a/a0a972f9/SetupCoroutine.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="34j8uRnzhfvGQHMbAb3oN5H5rFE" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Unity 에디터에 연결.Unity 에디터에 연결.executor&quot;: &quot;Debug&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/challenge-task&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;CodeLensConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager" selected="Unity 에디터에 연결.Unity 에디터에 연결">
+    <configuration name="유닛 테스트(배치 모드)" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.62f2\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Project\SuperE\SuperE -testResults Logs/results.xml -logFile Logs/Editor.log -testPlatform EditMode -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="C:\Project\SuperE\SuperE" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="ENV_FILE_PATHS" value="" />
+      <option name="REDIRECT_INPUT_PATH" value="" />
+      <option name="PTY_MODE" value="Auto" />
+      <option name="MIXED_MODE_DEBUG" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="독립실행형 플레이어" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../build/supere\SuperE.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Project\build\supere" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="ENV_FILE_PATHS" value="" />
+      <option name="REDIRECT_INPUT_PATH" value="" />
+      <option name="PTY_MODE" value="Auto" />
+      <option name="MIXED_MODE_DEBUG" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unity 시작" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.62f2\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Project\SuperE\SuperE -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="C:\Project\SuperE\SuperE" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="ENV_FILE_PATHS" value="" />
+      <option name="REDIRECT_INPUT_PATH" value="" />
+      <option name="PTY_MODE" value="Auto" />
+      <option name="MIXED_MODE_DEBUG" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unity 에디터에 연결" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="projectPathOnTarget" />
+      <option name="runtimes">
+        <list />
+      </option>
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <option name="useMixedMode" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unreal 에디터에 연결 후 재생" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="projectPathOnTarget" />
+      <option name="runtimes">
+        <list />
+      </option>
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <option name="useMixedMode" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="기기에 연결" type="UnityDevicePlayer" factoryName="UnityAttachToDevicePlayer">
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="디폴트 작업">
+      <changelist id="2780342b-e527-4c37-aa6a-352faea4af4c" name="변경" comment="" />
+      <created>1761715844724</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1761715844724</updated>
+      <workItem from="1761715846625" duration="486000" />
+      <workItem from="1761716358523" duration="146000" />
+      <workItem from="1761726594686" duration="14314000" />
+      <workItem from="1761783339321" duration="13242000" />
+      <workItem from="1761800144650" duration="18282000" />
+      <workItem from="1761869062574" duration="13939000" />
+      <workItem from="1761908388960" duration="3191000" />
+      <workItem from="1762079851459" duration="15512000" />
+      <workItem from="1762128715172" duration="7759000" />
+      <workItem from="1762140692932" duration="14622000" />
+      <workItem from="1762164274124" duration="1194000" />
+      <workItem from="1762179711585" duration="5173000" />
+      <workItem from="1762218190087" duration="18898000" />
+      <workItem from="1762250796649" duration="4275000" />
+      <workItem from="1762303120719" duration="5174000" />
+      <workItem from="1762337682869" duration="619000" />
+      <workItem from="1762389396840" duration="2138000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityProjectDiscoverer">
+    <option name="hasUnityReference" value="true" />
+    <option name="unityProject" value="true" />
+    <option name="unityProjectFolder" value="true" />
+  </component>
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.OperationCanceledException" breakIfHandledByOtherCode="false" displayValue="System.OperationCanceledException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.Threading.Tasks.TaskCanceledException" breakIfHandledByOtherCode="false" displayValue="System.Threading.Tasks.TaskCanceledException" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" breakIfHandledByOtherCode="false" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/SoundManager/SoundClip.cs</url>
+          <line>20</line>
+          <properties documentPath="C:\Project\SuperE\Assets\Scripts\SoundManager\SoundClip.cs" containingFunctionPresentation="메서드 'GetClip'" />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
